@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #0A0F1E;
+  --amber: #F59E0B;
+  --teal: #10B981;
+  --purple: #7C3AED;
+  --cyan: #06B6D4;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--navy);
+  color: white;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0A0F1E; }
+::-webkit-scrollbar-thumb { background: #1e2a4a; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #F59E0B; }
+
+.font-rajdhani { font-family: 'Rajdhani', sans-serif; }
+.font-space { font-family: 'Space Grotesk', sans-serif; }
+
+/* Frosted glass navbar */
+.navbar-glass {
+  backdrop-filter: blur(16px);
+  background: rgba(10, 15, 30, 0.85);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Glow effects */
+.glow-amber { box-shadow: 0 0 30px rgba(245,158,11,0.4); }
+.glow-teal { box-shadow: 0 0 30px rgba(16,185,129,0.4); }
+.glow-purple { box-shadow: 0 0 30px rgba(124,58,237,0.4); }
+.text-glow-amber { text-shadow: 0 0 20px rgba(245,158,11,0.6); }
+.text-glow-teal { text-shadow: 0 0 20px rgba(16,185,129,0.6); }
+
+/* Circuit animation */
+@keyframes dash {
+  to { stroke-dashoffset: -200; }
+}
+.circuit-line {
+  stroke-dasharray: 20 10;
+  animation: dash 3s linear infinite;
+}
+
+/* Orb float */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-30px) scale(1.05); }
+}
+.orb-float { animation: float 6s ease-in-out infinite; }
+.orb-float-delay { animation: float 8s ease-in-out infinite 2s; }
+.orb-float-delay2 { animation: float 7s ease-in-out infinite 4s; }
+
+/* Gradient text */
+.gradient-text-amber {
+  background: linear-gradient(135deg, #F59E0B, #FCD34D);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.gradient-text-teal {
+  background: linear-gradient(135deg, #10B981, #06B6D4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.gradient-text-purple {
+  background: linear-gradient(135deg, #7C3AED, #06B6D4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Card hover */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+}
+
+/* Step wizard */
+.step-active { background: #F59E0B; color: #0A0F1E; }
+.step-done { background: #10B981; color: white; }
+.step-inactive { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.4); }

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import { WhatsAppButton, BackToTop } from "../../components/FloatingButtons";
 import { ChevronDown, Clock, Users, Award, CheckCircle } from "lucide-react";
+import Footer from "../../components/Footer";
 
 const navLinks = [
   { label: "Home", href: "/electrical" },
@@ -136,6 +137,7 @@ export default function ElectricalCourses() {
           {courses.map((c, i) => <CourseCard key={i} course={c} index={i}/>)}
         </div>
       </section>
+      <Footer theme="electrical"/>
       <WhatsAppButton phone="919392606164"/>
       <BackToTop/>
     </div>

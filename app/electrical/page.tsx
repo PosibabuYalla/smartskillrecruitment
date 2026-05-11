@@ -4,7 +4,8 @@ import Link from "next/link";
 import Navbar from "../components/Navbar";
 import { WhatsAppButton, BackToTop } from "../components/FloatingButtons";
 import { StatCounter } from "../components/Counter";
-import { Zap, Shield, Award, Users, CheckCircle, Star, ArrowRight, Phone, Mail, MapPin } from "lucide-react";
+import { Zap, Shield, Award, Users, CheckCircle, Star, ArrowRight } from "lucide-react";
+import Footer from "../components/Footer";
 
 const navLinks = [
   { label: "Home", href: "/electrical" },
@@ -185,30 +186,7 @@ export default function ElectricalHome() {
         </motion.div>
       </section>
 
-      {/* Footer */}
-      <footer className="py-10 px-4 border-t border-white/10">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <div className="text-2xl font-bold font-rajdhani text-amber-400 mb-3">SSR Institute</div>
-            <p className="text-gray-400 text-sm">Electrical Division — Pre-Employment Career Guidelines & Job Placement Assistance for B.Tech, Diploma & ITI students.</p>
-          </div>
-          <div>
-            <div className="font-semibold text-white mb-3">Quick Links</div>
-            <div className="flex flex-col gap-2">
-              {navLinks.map(l => <Link key={l.href} href={l.href} className="text-gray-400 hover:text-amber-400 text-sm transition-colors">{l.label}</Link>)}
-            </div>
-          </div>
-          <div>
-            <div className="font-semibold text-white mb-3">Contact</div>
-            <div className="flex flex-col gap-2 text-sm text-gray-400">
-              <div className="flex items-center gap-2"><Phone size={14} className="text-amber-400"/><span>+91 93926 06164</span></div>
-              <div className="flex items-center gap-2"><Mail size={14} className="text-amber-400"/><span>ssrvijayawada@gmail.com</span></div>
-              <div className="flex items-center gap-2"><MapPin size={14} className="text-amber-400"/><span>Poranki, Vijayawada, AP - 521137</span></div>
-            </div>
-          </div>
-        </div>
-        <div className="text-center text-gray-600 text-xs mt-8">© 2024 SSR Institute. All rights reserved.</div>
-      </footer>
+      <Footer theme="electrical"/>
 
       <WhatsAppButton phone="919392606164"/>
       <BackToTop/>

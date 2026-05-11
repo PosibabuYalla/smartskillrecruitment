@@ -4,6 +4,7 @@ import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import { WhatsAppButton, BackToTop } from "../../components/FloatingButtons";
 import { Code2, Brain, Cloud, Database, Globe, Smartphone, CheckCircle, ArrowRight, Clock, Users } from "lucide-react";
+import Footer from "../../components/Footer";
 
 const navLinks = [
   { label: "Home", href: "/software" },
@@ -15,58 +16,58 @@ const navLinks = [
 
 const courses = [
   {
-    icon: <Code2 size={32}/>, title: "Full-Stack Web Development",
-    duration: "6 Months", students: "200+", color: "#10B981",
+    icon: <Code2 size={32}/>, title: "Python Full Stack",
+    duration: "4 Months", students: "200+", color: "#10B981",
     gradient: "linear-gradient(135deg, #10B981, #06B6D4)",
-    desc: "Master the complete web development stack from frontend to backend with modern frameworks.",
-    topics: ["HTML5, CSS3, JavaScript ES6+", "React.js & Next.js", "Node.js & Express", "MongoDB & PostgreSQL", "REST APIs & GraphQL", "Deployment & DevOps basics"],
-    skills: ["React", "Node.js", "MongoDB", "TypeScript", "Docker"],
-    outcomes: ["Full-Stack Developer", "Frontend Engineer", "Backend Developer"],
+    desc: "Build end-to-end web applications using Python, Django/Flask on the backend and React on the frontend.",
+    topics: ["Python fundamentals & OOP", "Django / Flask framework", "REST API development", "React.js frontend", "MySQL & PostgreSQL", "Deployment on AWS/Heroku"],
+    skills: ["Python", "Django", "React", "MySQL", "REST API"],
+    outcomes: ["Python Developer", "Full Stack Developer", "Backend Engineer"],
+  },
+  {
+    icon: <Globe size={32}/>, title: "MERN Stack",
+    duration: "4 Months", students: "180+", color: "#06B6D4",
+    gradient: "linear-gradient(135deg, #06B6D4, #3B82F6)",
+    desc: "Master the complete JavaScript ecosystem — MongoDB, Express, React, and Node.js for modern web apps.",
+    topics: ["JavaScript ES6+ & TypeScript", "React.js & Next.js", "Node.js & Express", "MongoDB & Mongoose", "REST APIs & JWT Auth", "Deployment & CI/CD"],
+    skills: ["React", "Node.js", "MongoDB", "Express", "TypeScript"],
+    outcomes: ["MERN Developer", "Frontend Engineer", "Backend Developer"],
   },
   {
     icon: <Brain size={32}/>, title: "AI & Machine Learning",
     duration: "5 Months", students: "150+", color: "#7C3AED",
     gradient: "linear-gradient(135deg, #7C3AED, #EC4899)",
-    desc: "Deep dive into artificial intelligence, machine learning, and deep learning with real projects.",
-    topics: ["Python for Data Science", "NumPy, Pandas, Matplotlib", "Scikit-learn & ML algorithms", "Deep Learning with TensorFlow", "NLP & Computer Vision", "MLOps & model deployment"],
+    desc: "Deep dive into artificial intelligence, machine learning, and deep learning with real-world projects.",
+    topics: ["Python for Data Science", "NumPy, Pandas, Matplotlib", "Scikit-learn & ML algorithms", "Deep Learning with TensorFlow", "NLP & Computer Vision", "Model deployment & MLOps"],
     skills: ["Python", "TensorFlow", "PyTorch", "Scikit-learn", "OpenCV"],
-    outcomes: ["ML Engineer", "Data Scientist", "AI Researcher"],
+    outcomes: ["ML Engineer", "AI Developer", "Data Scientist"],
   },
   {
-    icon: <Cloud size={32}/>, title: "Cloud Computing & DevOps",
-    duration: "4 Months", students: "120+", color: "#06B6D4",
-    gradient: "linear-gradient(135deg, #06B6D4, #3B82F6)",
-    desc: "Master cloud platforms and DevOps practices for modern software delivery.",
-    topics: ["AWS core services (EC2, S3, RDS)", "Azure & GCP fundamentals", "Docker & Kubernetes", "CI/CD with Jenkins & GitHub Actions", "Infrastructure as Code (Terraform)", "Monitoring & logging"],
-    skills: ["AWS", "Docker", "Kubernetes", "Terraform", "Jenkins"],
-    outcomes: ["Cloud Engineer", "DevOps Engineer", "SRE"],
-  },
-  {
-    icon: <Database size={32}/>, title: "Data Science & Analytics",
+    icon: <Database size={32}/>, title: "Data Science",
     duration: "4 Months", students: "130+", color: "#10B981",
     gradient: "linear-gradient(135deg, #10B981, #84CC16)",
-    desc: "Transform raw data into actionable insights using modern analytics tools.",
-    topics: ["Python & R programming", "SQL & NoSQL databases", "Data visualization (Tableau, Power BI)", "Statistical analysis", "Predictive modeling", "Business intelligence"],
-    skills: ["Python", "SQL", "Tableau", "Power BI", "R"],
+    desc: "Transform raw data into actionable insights using Python, SQL, and modern analytics & visualization tools.",
+    topics: ["Python & R programming", "SQL & NoSQL databases", "Data visualization (Tableau, Power BI)", "Statistical analysis & EDA", "Predictive modeling", "Business intelligence"],
+    skills: ["Python", "SQL", "Tableau", "Power BI", "Pandas"],
     outcomes: ["Data Analyst", "Business Analyst", "BI Developer"],
   },
   {
-    icon: <Globe size={32}/>, title: "Cybersecurity & Ethical Hacking",
-    duration: "3 Months", students: "90+", color: "#EF4444",
-    gradient: "linear-gradient(135deg, #EF4444, #F97316)",
-    desc: "Learn to protect systems and networks from cyber threats with ethical hacking techniques.",
-    topics: ["Network security fundamentals", "Penetration testing", "Web application security", "OWASP Top 10", "Incident response", "Security certifications prep"],
-    skills: ["Kali Linux", "Metasploit", "Wireshark", "Burp Suite", "Nmap"],
-    outcomes: ["Security Analyst", "Ethical Hacker", "SOC Analyst"],
+    icon: <Smartphone size={32}/>, title: "Digital Marketing",
+    duration: "2 Months", students: "220+", color: "#F59E0B",
+    gradient: "linear-gradient(135deg, #F59E0B, #EF4444)",
+    desc: "Master digital marketing strategies including SEO, SEM, social media, content marketing, and analytics.",
+    topics: ["SEO & SEM fundamentals", "Google Ads & Meta Ads", "Social media marketing", "Content marketing strategy", "Email marketing & automation", "Google Analytics & reporting"],
+    skills: ["SEO", "Google Ads", "Meta Ads", "Analytics", "Canva"],
+    outcomes: ["Digital Marketer", "SEO Specialist", "Social Media Manager"],
   },
   {
-    icon: <Smartphone size={32}/>, title: "Mobile App Development",
-    duration: "4 Months", students: "100+", color: "#F59E0B",
-    gradient: "linear-gradient(135deg, #F59E0B, #EF4444)",
-    desc: "Build cross-platform mobile applications for iOS and Android.",
-    topics: ["React Native fundamentals", "Flutter & Dart", "State management (Redux, Riverpod)", "Native APIs integration", "App Store deployment", "Performance optimization"],
-    skills: ["React Native", "Flutter", "Dart", "Firebase", "Redux"],
-    outcomes: ["Mobile Developer", "React Native Dev", "Flutter Dev"],
+    icon: <Code2 size={32}/>, title: "Java Full Stack",
+    duration: "5 Months", students: "160+", color: "#EF4444",
+    gradient: "linear-gradient(135deg, #EF4444, #F97316)",
+    desc: "Build enterprise-grade applications using Java, Spring Boot on the backend and React on the frontend.",
+    topics: ["Core Java & OOP concepts", "Spring Boot & Spring MVC", "Hibernate & JPA", "React.js frontend", "MySQL & REST APIs", "Microservices & deployment"],
+    skills: ["Java", "Spring Boot", "React", "MySQL", "Hibernate"],
+    outcomes: ["Java Developer", "Full Stack Engineer", "Backend Developer"],
   },
 ];
 
@@ -154,6 +155,7 @@ export default function SoftwareCourses() {
           ))}
         </div>
       </section>
+      <Footer theme="software"/>
       <WhatsAppButton phone="917799811611"/>
       <BackToTop/>
     </div>

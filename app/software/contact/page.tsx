@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Navbar from "../../components/Navbar";
 import { WhatsAppButton, BackToTop } from "../../components/FloatingButtons";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import Footer from "../../components/Footer";
 
 const navLinks = [
   { label: "Home", href: "/software" },
@@ -94,6 +95,7 @@ export default function SoftwareContact() {
           </motion.div>
         </div>
       </section>
+      <Footer theme="software"/>
       <WhatsAppButton phone="917799811611"/>
       <BackToTop/>
     </div>

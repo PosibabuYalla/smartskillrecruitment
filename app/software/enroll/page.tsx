@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "../../components/Navbar";
 import { WhatsAppButton, BackToTop } from "../../components/FloatingButtons";
 import { CheckCircle, ChevronRight } from "lucide-react";
+import Footer from "../../components/Footer";
 
 const navLinks = [
   { label: "Home", href: "/software" },
@@ -13,7 +14,7 @@ const navLinks = [
   { label: "Contact", href: "/software/contact" },
 ];
 
-const courses = ["Full-Stack Web Development", "AI & Machine Learning", "Cloud Computing & DevOps", "Data Science & Analytics", "Cybersecurity & Ethical Hacking", "Mobile App Development"];
+const courses = ["Python Full Stack", "MERN Stack", "AI & Machine Learning", "Data Science", "Digital Marketing", "Java Full Stack"];
 const batches = ["January 2025", "February 2025", "March 2025", "April 2025"];
 const steps = ["Personal Info", "Course Selection", "Goals", "Review"];
 
@@ -212,6 +213,7 @@ export default function SoftwareEnroll() {
           )}
         </div>
       </section>
+      <Footer theme="software"/>
       <WhatsAppButton phone="917799811611"/>
       <BackToTop/>
     </div>

@@ -15,15 +15,15 @@ const navLinks = [
 const team = [
   { name: "Er. Suresh Reddy", role: "Founder & Director", exp: "20 yrs", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&q=80" },
   { name: "Er. Kavitha Rao", role: "Head of Training", exp: "15 yrs", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&q=80" },
-  { name: "Er. Ravi Kumar", role: "Senior Trainer", exp: "12 yrs", img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80" },
+  { name: "Er. Ravi Kumar", role: "Senior Trainer — HT/LT", exp: "12 yrs", img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80" },
   { name: "Er. Anita Singh", role: "Placement Head", exp: "10 yrs", img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80" },
 ];
 
 const milestones = [
-  { year: "2009", event: "SSR Institute founded in Hyderabad" },
-  { year: "2012", event: "First batch of 50 students placed in BHEL" },
-  { year: "2015", event: "ISO 9001:2015 certification achieved" },
-  { year: "2018", event: "Expanded to 3 training centers across Telangana" },
+  { year: "2009", event: "SSR Institute founded in Vijayawada, Andhra Pradesh" },
+  { year: "2012", event: "First batch placed in thermal power plants & substations" },
+  { year: "2015", event: "Launched HT/LT Motors & Protocol Preparation programs" },
+  { year: "2018", event: "Expanded placement network across power industries in India" },
   { year: "2021", event: "Launched online hybrid training programs" },
   { year: "2024", event: "5000+ alumni milestone reached" },
 ];
@@ -42,10 +42,10 @@ export default function ElectricalAbout() {
           <motion.div initial={{opacity:0, x:-30}} animate={{opacity:1, x:0}} transition={{duration:0.8}}>
             <h1 className="text-5xl font-bold font-rajdhani gradient-text-amber mb-6">Our Story</h1>
             <p className="text-gray-300 mb-4 leading-relaxed">
-              Founded in 2009 by Er. Suresh Reddy, SSR Institute began with a simple mission: bridge the gap between academic electrical education and real-world industrial requirements.
+              Founded in 2009, SSR Institute began with a simple mission: bridge the gap between academic electrical education and real-world industrial requirements in Andhra Pradesh.
             </p>
             <p className="text-gray-400 leading-relaxed">
-              Today, we are Telangana's most trusted electrical training institute with 5000+ alumni working in India's top companies including BHEL, L&T, NTPC, and Siemens.
+              Based in Vijayawada, we are Andhra Pradesh's most trusted electrical training institute with 5000+ alumni placed in thermal power plants, substations, O&M plants, and power industries across India.
             </p>
           </motion.div>
           <motion.div initial={{opacity:0, x:30}} animate={{opacity:1, x:0}} transition={{duration:0.8, delay:0.2}}
@@ -120,7 +120,7 @@ export default function ElectricalAbout() {
         </div>
       </section>
 
-      <WhatsAppButton/>
+      <WhatsAppButton phone="919392606164"/>
       <BackToTop/>
     </div>
   );

@@ -16,52 +16,52 @@ const navLinks = [
 
 const courses = [
   {
-    title: "Cable Identification & Installation",
-    duration: "4 Weeks", students: "120+", level: "Beginner",
-    desc: "Master cable types, color coding, installation techniques, and safety standards used in industrial environments.",
-    topics: ["Cable types & specifications", "Color coding standards", "Conduit installation", "Cable tray systems", "Safety protocols", "Testing & commissioning"],
-    badge: "Foundation",
-  },
-  {
-    title: "Panel Board Design & Assembly",
-    duration: "6 Weeks", students: "95+", level: "Intermediate",
-    desc: "Learn to design, assemble, and troubleshoot industrial panel boards including MCBs, MCCBs, and contactors.",
-    topics: ["Panel layout design", "MCB/MCCB selection", "Contactor wiring", "PLC integration basics", "Fault diagnosis", "Documentation"],
+    title: "HT and LT Motors Training",
+    duration: "6 Weeks", students: "200+", level: "Intermediate",
+    desc: "Comprehensive hands-on training on High Tension and Low Tension motors used in industrial power plants and substations.",
+    topics: ["HT & LT motor types and specifications", "IR value & PI value testing", "Inductance value measurement", "Direction of rotation of motor", "How to use Motor Checker", "Motor protection & maintenance"],
     badge: "Core",
   },
   {
-    title: "HT/LT Motors & Drives",
-    duration: "8 Weeks", students: "80+", level: "Advanced",
-    desc: "Comprehensive training on high-tension and low-tension motors, VFDs, and industrial drive systems.",
-    topics: ["Motor types & selection", "Star-delta starters", "VFD programming", "Motor protection", "Energy efficiency", "Maintenance schedules"],
+    title: "LEPB & Motor Control Systems",
+    duration: "4 Weeks", students: "150+", level: "Intermediate",
+    desc: "Master Local Emergency Push Button (LEPB) operations, tripping, closing sequences, and motor control panel operations.",
+    topics: ["LEPB tripping and closing procedures", "Motor control panel wiring", "Emergency shutdown systems", "Interlock logic and safety circuits", "Control panel troubleshooting", "Field testing & commissioning"],
     badge: "Advanced",
   },
   {
-    title: "Industrial Protocols & Automation",
-    duration: "6 Weeks", students: "70+", level: "Advanced",
-    desc: "Industry 4.0 protocols including Modbus, PROFIBUS, PROFINET, and SCADA system integration.",
-    topics: ["Modbus RTU/TCP", "PROFIBUS DP", "PROFINET", "SCADA basics", "HMI programming", "IoT integration"],
+    title: "Protocol Preparation & Documentation",
+    duration: "3 Weeks", students: "180+", level: "All Levels",
+    desc: "Learn to prepare industry-standard electrical protocols, maintenance records, and commissioning documents required in power plants.",
+    topics: ["Protocol preparation standards", "Maintenance log documentation", "Commissioning checklists", "Test report formats", "Safety permit-to-work systems", "Compliance documentation"],
+    badge: "Foundation",
+  },
+  {
+    title: "Power Transformer & Auxiliaries",
+    duration: "5 Weeks", students: "120+", level: "Advanced",
+    desc: "In-depth training on power transformer maintenance, testing, and auxiliary systems used in substations and power plants.",
+    topics: ["Transformer types & ratings", "Transformer oil testing", "Buchholz relay & protection", "Auxiliary systems maintenance", "Tap changer operations", "Substation safety procedures"],
     badge: "Specialist",
   },
   {
-    title: "Electrical Safety & Compliance",
-    duration: "2 Weeks", students: "200+", level: "All Levels",
-    desc: "Essential safety training covering IS standards, PPE, lockout/tagout, and electrical hazard management.",
-    topics: ["IS/IEC standards", "PPE selection", "LOTO procedures", "Arc flash safety", "First aid", "Compliance documentation"],
+    title: "Industrial Electrical Safety",
+    duration: "2 Weeks", students: "300+", level: "All Levels",
+    desc: "Essential safety training for B.Tech, Diploma, and ITI electrical students entering thermal power plants, substations, and O&M plants.",
+    topics: ["Electrical safety standards (IS/IEC)", "PPE selection and usage", "Lockout/Tagout (LOTO) procedures", "Arc flash hazard awareness", "First aid for electrical accidents", "Permit-to-work systems"],
     badge: "Safety",
   },
   {
-    title: "Renewable Energy Systems",
-    duration: "5 Weeks", students: "60+", level: "Intermediate",
-    desc: "Solar PV systems, wind energy integration, battery storage, and grid-tie inverter installation.",
-    topics: ["Solar PV design", "Inverter types", "Battery storage", "Grid-tie systems", "Net metering", "Maintenance"],
-    badge: "Green Tech",
+    title: "Pre-Employment Career Awareness Program",
+    duration: "2 Weeks", students: "500+", level: "Beginner",
+    desc: "Career guidelines and awareness training for B.Tech, Diploma, and ITI Electrical students about the industrial sector and job placement assistance.",
+    topics: ["Industrial sector overview", "Job roles in power plants & substations", "Resume & interview preparation", "Placement in thermal power plants", "O&M plant opportunities across India", "Career growth roadmap"],
+    badge: "Career",
   },
 ];
 
 const badgeColors: Record<string, string> = {
   Foundation: "#10B981", Core: "#F59E0B", Advanced: "#EF4444",
-  Specialist: "#7C3AED", Safety: "#06B6D4", "Green Tech": "#84CC16",
+  Specialist: "#7C3AED", Safety: "#06B6D4", Career: "#F97316",
 };
 
 function CourseCard({ course, index }: { course: typeof courses[0]; index: number }) {
@@ -136,7 +136,7 @@ export default function ElectricalCourses() {
           {courses.map((c, i) => <CourseCard key={i} course={c} index={i}/>)}
         </div>
       </section>
-      <WhatsAppButton/>
+      <WhatsAppButton phone="919392606164"/>
       <BackToTop/>
     </div>
   );

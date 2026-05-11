@@ -31,13 +31,13 @@ function CircuitSVG() {
 }
 
 const whyCards = [
-  { icon: <Award size={28}/>, title: "Industry Certified", desc: "Globally recognized certifications accepted by top companies" },
-  { icon: <Users size={28}/>, title: "Expert Trainers", desc: "15+ years experienced industry professionals as mentors" },
-  { icon: <Shield size={28}/>, title: "Hands-on Labs", desc: "Real industrial equipment for practical training sessions" },
-  { icon: <Zap size={28}/>, title: "Job Placement", desc: "98% placement rate with 50+ hiring partner companies" },
+  { icon: <Award size={28}/>, title: "Industry Certified", desc: "Training aligned with thermal power plants, substations, and O&M plant requirements" },
+  { icon: <Users size={28}/>, title: "Expert Trainers", desc: "15+ years experienced electrical industry professionals as mentors" },
+  { icon: <Shield size={28}/>, title: "Hands-on Training", desc: "Real industrial equipment — HT/LT motors, transformers, and control panels" },
+  { icon: <Zap size={28}/>, title: "Job Placement", desc: "Placement assistance in power plants & power industries across India" },
 ];
 
-const sectors = ["Power Plants", "Manufacturing", "Oil & Gas", "Construction", "Railways", "Renewable Energy", "Automotive", "Aerospace"];
+const sectors = ["Thermal Power Plants", "Substations", "O&M Plants", "Power Industries", "Manufacturing", "Oil & Gas", "Railways", "Renewable Energy"];
 
 const testimonials = [
   { name: "Rahul Sharma", role: "Electrical Engineer, BHEL", text: "SSR Institute transformed my career. The hands-on training was exceptional.", rating: 5 },
@@ -68,7 +68,7 @@ export default function ElectricalHome() {
           </motion.h1>
           <motion.p initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0.8, delay:0.4}}
             className="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
-            Industry-grade electrical training with real equipment, expert mentors, and guaranteed placement support.
+            Industry-grade electrical training with real equipment — HT/LT Motors, Protocol Preparation, Power Transformer maintenance, and guaranteed placement in power plants across India.
           </motion.p>
           <motion.div initial={{opacity:0, y:20}} animate={{opacity:1, y:0}} transition={{duration:0.8, delay:0.6}}
             className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -190,7 +190,7 @@ export default function ElectricalHome() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="text-2xl font-bold font-rajdhani text-amber-400 mb-3">SSR Institute</div>
-            <p className="text-gray-400 text-sm">Electrical Division — Empowering India's electrical workforce since 2009.</p>
+            <p className="text-gray-400 text-sm">Electrical Division — Pre-Employment Career Guidelines & Job Placement Assistance for B.Tech, Diploma & ITI students.</p>
           </div>
           <div>
             <div className="font-semibold text-white mb-3">Quick Links</div>
@@ -201,16 +201,16 @@ export default function ElectricalHome() {
           <div>
             <div className="font-semibold text-white mb-3">Contact</div>
             <div className="flex flex-col gap-2 text-sm text-gray-400">
-              <div className="flex items-center gap-2"><Phone size={14} className="text-amber-400"/><span>+91 99999 99999</span></div>
-              <div className="flex items-center gap-2"><Mail size={14} className="text-amber-400"/><span>electrical@ssrinstitute.in</span></div>
-              <div className="flex items-center gap-2"><MapPin size={14} className="text-amber-400"/><span>Hyderabad, Telangana</span></div>
+              <div className="flex items-center gap-2"><Phone size={14} className="text-amber-400"/><span>+91 93926 06164</span></div>
+              <div className="flex items-center gap-2"><Mail size={14} className="text-amber-400"/><span>ssrvijayawada@gmail.com</span></div>
+              <div className="flex items-center gap-2"><MapPin size={14} className="text-amber-400"/><span>Poranki, Vijayawada, AP - 521137</span></div>
             </div>
           </div>
         </div>
         <div className="text-center text-gray-600 text-xs mt-8">© 2024 SSR Institute. All rights reserved.</div>
       </footer>
 
-      <WhatsAppButton/>
+      <WhatsAppButton phone="919392606164"/>
       <BackToTop/>
     </div>
   );

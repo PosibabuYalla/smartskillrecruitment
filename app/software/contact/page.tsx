@@ -33,10 +33,10 @@ export default function SoftwareContact() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
           <motion.div initial={{opacity:0, x:-30}} whileInView={{opacity:1, x:0}} viewport={{once:true}} className="flex flex-col gap-5">
             {[
-              { icon: <Phone size={22}/>, title: "Phone", lines: ["+91 88888 88888", "+91 77777 77777"], color: "#10B981" },
-              { icon: <Mail size={22}/>, title: "Email", lines: ["software@ssrinstitute.in", "careers@ssrinstitute.in"], color: "#7C3AED" },
-              { icon: <MapPin size={22}/>, title: "Address", lines: ["3rd Floor, Tech Hub", "Madhapur, Hyderabad 500081"], color: "#06B6D4" },
-              { icon: <Clock size={22}/>, title: "Working Hours", lines: ["Mon–Sat: 9:00 AM – 8:00 PM", "Sunday: 10:00 AM – 3:00 PM"], color: "#10B981" },
+              { icon: <Phone size={22}/>, title: "Phone", lines: ["+91 77998 11611"], color: "#10B981" },
+              { icon: <Mail size={22}/>, title: "Email", lines: ["ssrvijayawada@gmail.com"], color: "#7C3AED" },
+              { icon: <MapPin size={22}/>, title: "Address", lines: ["Flat No.: 15-136-1, Sri Nagar Colony,", "Prabhu Nagar, Poranki, Vijayawada,", "NTR Dist., Andhra Pradesh - 521137"], color: "#06B6D4" },
+              { icon: <Clock size={22}/>, title: "Working Hours", lines: ["Mon–Sat: 9:00 AM – 7:00 PM", "Sunday: By Appointment"], color: "#10B981" },
             ].map((item, i) => (
               <div key={i} className="flex gap-4 p-5 rounded-2xl"
                 style={{background:`${item.color}08`, border:`1px solid ${item.color}20`}}>
@@ -94,7 +94,7 @@ export default function SoftwareContact() {
           </motion.div>
         </div>
       </section>
-      <WhatsAppButton/>
+      <WhatsAppButton phone="917799811611"/>
       <BackToTop/>
     </div>
   );

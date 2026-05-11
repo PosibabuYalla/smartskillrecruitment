@@ -39,10 +39,10 @@ export default function ElectricalContact() {
           {/* Info */}
           <motion.div initial={{opacity:0, x:-30}} whileInView={{opacity:1, x:0}} viewport={{once:true}} className="flex flex-col gap-5">
             {[
-              { icon: <Phone size={22}/>, title: "Phone", lines: ["+91 99999 99999", "+91 88888 88888"] },
-              { icon: <Mail size={22}/>, title: "Email", lines: ["electrical@ssrinstitute.in", "admissions@ssrinstitute.in"] },
-              { icon: <MapPin size={22}/>, title: "Address", lines: ["Plot 42, HITEC City", "Hyderabad, Telangana 500081"] },
-              { icon: <Clock size={22}/>, title: "Working Hours", lines: ["Mon–Sat: 9:00 AM – 7:00 PM", "Sunday: 10:00 AM – 2:00 PM"] },
+              { icon: <Phone size={22}/>, title: "Phone", lines: ["+91 93926 06164"] },
+              { icon: <Mail size={22}/>, title: "Email", lines: ["ssrvijayawada@gmail.com"] },
+              { icon: <MapPin size={22}/>, title: "Address", lines: ["Flat No.: 15-136-1, Sri Nagar Colony,", "Prabhu Nagar, Poranki, Vijayawada,", "NTR Dist., Andhra Pradesh - 521137"] },
+              { icon: <Clock size={22}/>, title: "Working Hours", lines: ["Mon–Sat: 9:00 AM – 7:00 PM", "Sunday: By Appointment"] },
             ].map((item, i) => (
               <div key={i} className="flex gap-4 p-5 rounded-2xl"
                 style={{background:'rgba(245,158,11,0.06)', border:'1px solid rgba(245,158,11,0.15)'}}>
@@ -102,7 +102,7 @@ export default function ElectricalContact() {
           </motion.div>
         </div>
       </section>
-      <WhatsAppButton/>
+      <WhatsAppButton phone="919392606164"/>
       <BackToTop/>
     </div>
   );

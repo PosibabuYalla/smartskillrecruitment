@@ -163,11 +163,11 @@ export default function SoftwareHome() {
           <NeonOrbs/>
           <h2 className="text-4xl font-bold font-space gradient-text-teal mb-4 relative z-10">Ready to Code Your Future?</h2>
           <p className="text-gray-300 mb-8 relative z-10">Join 3000+ developers who launched their careers with SSR Institute</p>
-          <Link href="/software/enroll"
+          <a href="https://wa.me/917799811611" target="_blank" rel="noopener noreferrer"
             className="inline-block px-10 py-4 rounded-full font-bold text-white glow-teal transition-transform hover:scale-105 relative z-10"
             style={{background:'linear-gradient(135deg, #10B981, #7C3AED)'}}>
-            Enroll for Free Demo
-          </Link>
+            Call Now: +91 77998 11611
+          </a>
         </motion.div>
       </section>
 
@@ -185,20 +185,27 @@ export default function SoftwareHome() {
             </div>
           </div>
           <div>
-            <div className="font-semibold text-white mb-3">Tech Stack We Teach</div>
-            <div className="flex flex-wrap gap-2">
-              {["React", "Node.js", "Python", "AWS", "Docker", "MongoDB"].map(t => (
-                <span key={t} className="text-xs px-2.5 py-1 rounded-full text-teal-400" style={{background:'rgba(16,185,129,0.1)', border:'1px solid rgba(16,185,129,0.2)'}}>
-                  {t}
-                </span>
-              ))}
+            <div className="font-semibold text-white mb-3">Contact</div>
+            <div className="flex flex-col gap-2 text-sm text-gray-400">
+              <a href="tel:+917799811611" className="flex items-center gap-2 hover:text-teal-400 transition-colors">
+                <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-teal-400 fill-current flex-shrink-0"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                +91 77998 11611
+              </a>
+              <a href="mailto:ssrvijayawada@gmail.com" className="flex items-center gap-2 hover:text-teal-400 transition-colors">
+                <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-teal-400 fill-current flex-shrink-0"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                ssrvijayawada@gmail.com
+              </a>
+              <div className="flex items-start gap-2">
+                <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 text-teal-400 fill-current flex-shrink-0 mt-0.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span>Poranki, Vijayawada,<br/>AP - 521137</span>
+              </div>
             </div>
           </div>
         </div>
         <div className="text-center text-gray-600 text-xs mt-8">© 2024 SSR Institute. All rights reserved.</div>
       </footer>
 
-      <WhatsAppButton/>
+      <WhatsAppButton phone="917799811611"/>
       <BackToTop/>
     </div>
   );

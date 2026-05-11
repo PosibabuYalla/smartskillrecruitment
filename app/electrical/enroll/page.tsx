@@ -184,7 +184,7 @@ export default function ElectricalEnroll() {
           )}
         </div>
       </section>
-      <WhatsAppButton/>
+      <WhatsAppButton phone="919392606164"/>
       <BackToTop/>
     </div>
   );

@@ -68,7 +68,7 @@ export default function ElectricalBlog() {
           ))}
         </div>
       </section>
-      <WhatsAppButton/>
+      <WhatsAppButton phone="919392606164"/>
       <BackToTop/>
     </div>
   );

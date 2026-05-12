@@ -6,7 +6,7 @@ const data: CourseData = {
   title: "Java Full Stack", badge: "Enterprise Ready",
   tagline: "Build enterprise-grade applications with Java, Spring Boot, Microservices & React. The most sought-after stack in Indian IT.",
   heroImage: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1600&q=80",
-  duration: "5 Months", students: "160+", level: "Beginner → Advanced", rating: 4.8,
+  duration: "6–8 Months", students: "160+", level: "Beginner → Advanced", rating: 4.8,
   color: "#EF4444", gradient: "linear-gradient(135deg, #EF4444, #F97316)",
   overview: "The most comprehensive Java Full Stack program covering Core Java, Spring Boot, Microservices, React frontend, MySQL & cloud deployment. Designed for students targeting TCS, Infosys, Wipro & product companies.",
   learns: [
@@ -59,7 +59,7 @@ const data: CourseData = {
     { module: "Microservices & DevOps", topics: ["Microservices design patterns", "Spring Cloud Gateway & Eureka", "Docker containerization", "Kubernetes deployment", "CI/CD with GitHub Actions", "AWS EC2 & RDS deployment"] },
   ],
   pricing: {
-    original: 55000, offer: 30000, emi: 3000,
+    original: 50000, offer: 35000, emi: 3500,
     includes: [
       "140+ hours of live training sessions",
       "5 enterprise-grade projects",

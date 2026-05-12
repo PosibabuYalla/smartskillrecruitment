@@ -6,7 +6,7 @@ const data: CourseData = {
   title: "Digital Marketing", badge: "Fast Track",
   tagline: "Master SEO, Google Ads, Social Media, Content Marketing & Analytics to grow brands and launch your digital career.",
   heroImage: "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=1600&q=80",
-  duration: "2 Months", students: "220+", level: "Beginner → Professional", rating: 4.7,
+  duration: "3 Months", students: "220+", level: "Beginner → Professional", rating: 4.7,
   color: "#F59E0B", gradient: "linear-gradient(135deg, #F59E0B, #EF4444)",
   overview: "A practical, job-ready digital marketing program covering SEO, paid advertising, social media, email marketing, content strategy and analytics. Learn to run real campaigns with real budgets from day one.",
   learns: [
@@ -59,7 +59,7 @@ const data: CourseData = {
     { module: "Freelancing & Career", topics: ["Building a digital marketing portfolio", "Freelance pricing & proposals", "Finding clients on Upwork & Fiverr", "Agency workflow & tools", "Personal branding on LinkedIn", "Interview preparation"] },
   ],
   pricing: {
-    original: 25000, offer: 12000, emi: 1200,
+    original: 40000, offer: 30000, emi: 3000,
     includes: [
       "60+ hours of live training sessions",
       "5 real campaign projects",

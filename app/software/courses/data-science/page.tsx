@@ -6,9 +6,9 @@ const data: CourseData = {
   title: "Data Science", badge: "High Demand",
   tagline: "Turn raw data into business insights. Master Python, SQL, Tableau & statistical analysis to become a data-driven professional.",
   heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80",
-  duration: "4 Months", students: "130+", level: "Beginner → Advanced", rating: 4.8,
+  duration: "6–8 or 8–12 Months", students: "130+", level: "Beginner → Advanced", rating: 4.8,
   color: "#10B981", gradient: "linear-gradient(135deg, #10B981, #84CC16)",
-  overview: "A complete data science program covering Python, SQL, statistics, machine learning, and business intelligence tools. Learn to collect, clean, analyze, and visualize data to drive real business decisions.",
+  overview: "A complete data science program covering Python, SQL, statistics, machine learning, and business intelligence tools. Available in two tracks: 6–8 Month Standard (₹40,000) and 8–12 Month Advanced (₹60,000). Learn to collect, clean, analyze, and visualize data to drive real business decisions.",
   learns: [
     "Python programming for data analysis",
     "SQL — advanced queries, joins, window functions",
@@ -59,8 +59,10 @@ const data: CourseData = {
     { module: "Business Intelligence", topics: ["KPI definition & tracking", "A/B testing methodology", "Cohort analysis", "Funnel analysis", "Forecasting techniques", "Presenting insights to stakeholders"] },
   ],
   pricing: {
-    original: 40000, offer: 22000, emi: 2200,
+    original: 75000, offer: 40000, emi: 4000,
     includes: [
+      "6–8 Month Standard Course — ₹40,000",
+      "8–12 Month Advanced Course — ₹60,000",
       "110+ hours of live training sessions",
       "5 industry-grade data projects",
       "Industry-recognized certificate",

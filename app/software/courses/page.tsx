@@ -18,7 +18,7 @@ const courses = [
   {
     slug: "python-full-stack",
     icon: <Code2 size={32}/>, title: "Python Full Stack",
-    duration: "4 Months", students: "200+", color: "#10B981",
+    duration: "6 Months", students: "200+", color: "#10B981",
     gradient: "linear-gradient(135deg, #10B981, #06B6D4)",
     desc: "Build end-to-end web applications using Python, Django/Flask on the backend and React on the frontend.",
     topics: ["Python fundamentals & OOP", "Django / Flask framework", "REST API development", "React.js frontend", "MySQL & PostgreSQL", "Deployment on AWS/Heroku"],
@@ -28,7 +28,7 @@ const courses = [
   {
     slug: "mern-stack",
     icon: <Globe size={32}/>, title: "MERN Stack",
-    duration: "4 Months", students: "180+", color: "#06B6D4",
+    duration: "6 Months", students: "180+", color: "#06B6D4",
     gradient: "linear-gradient(135deg, #06B6D4, #3B82F6)",
     desc: "Master the complete JavaScript ecosystem — MongoDB, Express, React, and Node.js for modern web apps.",
     topics: ["JavaScript ES6+ & TypeScript", "React.js & Next.js", "Node.js & Express", "MongoDB & Mongoose", "REST APIs & JWT Auth", "Deployment & CI/CD"],
@@ -38,7 +38,7 @@ const courses = [
   {
     slug: "ai-machine-learning",
     icon: <Brain size={32}/>, title: "AI & Machine Learning",
-    duration: "5 Months", students: "150+", color: "#7C3AED",
+    duration: "6–8 Months", students: "150+", color: "#7C3AED",
     gradient: "linear-gradient(135deg, #7C3AED, #EC4899)",
     desc: "Deep dive into artificial intelligence, machine learning, and deep learning with real-world projects.",
     topics: ["Python for Data Science", "NumPy, Pandas, Matplotlib", "Scikit-learn & ML algorithms", "Deep Learning with TensorFlow", "NLP & Computer Vision", "Model deployment & MLOps"],
@@ -48,7 +48,7 @@ const courses = [
   {
     slug: "data-science",
     icon: <Database size={32}/>, title: "Data Science",
-    duration: "4 Months", students: "130+", color: "#10B981",
+    duration: "6–8 Months", students: "130+", color: "#10B981",
     gradient: "linear-gradient(135deg, #10B981, #84CC16)",
     desc: "Transform raw data into actionable insights using Python, SQL, and modern analytics & visualization tools.",
     topics: ["Python & R programming", "SQL & NoSQL databases", "Data visualization (Tableau, Power BI)", "Statistical analysis & EDA", "Predictive modeling", "Business intelligence"],
@@ -58,7 +58,7 @@ const courses = [
   {
     slug: "digital-marketing",
     icon: <Smartphone size={32}/>, title: "Digital Marketing",
-    duration: "2 Months", students: "220+", color: "#F59E0B",
+    duration: "3 Months", students: "220+", color: "#F59E0B",
     gradient: "linear-gradient(135deg, #F59E0B, #EF4444)",
     desc: "Master digital marketing strategies including SEO, SEM, social media, content marketing, and analytics.",
     topics: ["SEO & SEM fundamentals", "Google Ads & Meta Ads", "Social media marketing", "Content marketing strategy", "Email marketing & automation", "Google Analytics & reporting"],
@@ -68,7 +68,7 @@ const courses = [
   {
     slug: "java-full-stack",
     icon: <Code2 size={32}/>, title: "Java Full Stack",
-    duration: "5 Months", students: "160+", color: "#EF4444",
+    duration: "6–8 Months", students: "160+", color: "#EF4444",
     gradient: "linear-gradient(135deg, #EF4444, #F97316)",
     desc: "Build enterprise-grade applications using Java, Spring Boot on the backend and React on the frontend.",
     topics: ["Core Java & OOP concepts", "Spring Boot & Spring MVC", "Hibernate & JPA", "React.js frontend", "MySQL & REST APIs", "Microservices & deployment"],

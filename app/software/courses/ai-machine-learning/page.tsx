@@ -6,7 +6,7 @@ const data: CourseData = {
   title: "AI & Machine Learning", badge: "Future Tech",
   tagline: "Build intelligent systems with Python, TensorFlow & PyTorch. From ML fundamentals to deploying AI models in production.",
   heroImage: "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1600&q=80",
-  duration: "5 Months", students: "150+", level: "Intermediate → Advanced", rating: 4.9,
+  duration: "6–8 Months", students: "150+", level: "Intermediate → Advanced", rating: 4.9,
   color: "#7C3AED", gradient: "linear-gradient(135deg, #7C3AED, #EC4899)",
   overview: "The most comprehensive AI/ML program in Andhra Pradesh. Master machine learning algorithms, deep learning, NLP, computer vision, and deploy production AI models. Includes hands-on projects with real datasets.",
   learns: [
@@ -59,7 +59,7 @@ const data: CourseData = {
     { module: "MLOps & Deployment", topics: ["MLflow experiment tracking", "Model versioning & registry", "FastAPI model serving", "Docker containerization", "AWS SageMaker deployment", "Monitoring & drift detection"] },
   ],
   pricing: {
-    original: 60000, offer: 35000, emi: 3500,
+    original: 60000, offer: 45000, emi: 4500,
     includes: [
       "150+ hours of live training sessions",
       "5 AI/ML capstone projects with real datasets",

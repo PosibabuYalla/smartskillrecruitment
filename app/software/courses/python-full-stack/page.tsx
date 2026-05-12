@@ -6,7 +6,7 @@ const data: CourseData = {
   title: "Python Full Stack", badge: "Most Popular",
   tagline: "Master Python, Django, React & cloud deployment to build production-ready full-stack web applications from scratch.",
   heroImage: "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=1600&q=80",
-  duration: "4 Months", students: "200+", level: "Beginner → Advanced", rating: 4.8,
+  duration: "6 Months", students: "200+", level: "Beginner → Advanced", rating: 4.8,
   color: "#10B981", gradient: "linear-gradient(135deg, #10B981, #06B6D4)",
   overview: "A comprehensive program covering Python programming, Django/Flask backend, React frontend, databases, REST APIs, and cloud deployment. Build 5+ real-world projects and land your first developer job.",
   learns: [
@@ -59,7 +59,7 @@ const data: CourseData = {
     { module: "Deployment & DevOps", topics: ["Git branching strategies", "Docker & containerization", "AWS EC2 & S3 setup", "CI/CD with GitHub Actions", "Nginx & Gunicorn", "SSL & domain setup"] },
   ],
   pricing: {
-    original: 45000, offer: 25000, emi: 2500,
+    original: 45000, offer: 35000, emi: 3500,
     includes: [
       "120+ hours of live training sessions",
       "5 real-world capstone projects",

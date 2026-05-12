@@ -6,7 +6,7 @@ const data: CourseData = {
   title: "MERN Stack", badge: "Top Rated",
   tagline: "Become a JavaScript expert — build scalable full-stack apps with MongoDB, Express, React & Node.js.",
   heroImage: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1600&q=80",
-  duration: "4 Months", students: "180+", level: "Beginner → Advanced", rating: 4.9,
+  duration: "6 Months", students: "180+", level: "Beginner → Advanced", rating: 4.9,
   color: "#06B6D4", gradient: "linear-gradient(135deg, #06B6D4, #3B82F6)",
   overview: "The most in-demand full-stack JavaScript program. Master React for frontend, Node.js & Express for backend, MongoDB for database, and deploy production apps on cloud platforms.",
   learns: [
@@ -59,7 +59,7 @@ const data: CourseData = {
     { module: "Deployment & DevOps", topics: ["Docker & docker-compose", "GitHub Actions CI/CD", "AWS EC2 & S3", "Nginx reverse proxy", "PM2 process management", "Monitoring & logging"] },
   ],
   pricing: {
-    original: 50000, offer: 28000, emi: 2800,
+    original: 45000, offer: 35000, emi: 3500,
     includes: [
       "130+ hours of live training sessions",
       "5 deployed real-world projects",

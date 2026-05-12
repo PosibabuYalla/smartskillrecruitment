@@ -4,7 +4,7 @@ import Link from "next/link";
 import Navbar from "../components/Navbar";
 import { WhatsAppButton, BackToTop } from "../components/FloatingButtons";
 import { StatCounter } from "../components/Counter";
-import { Code2, Brain, Cloud, Database, Globe, Smartphone, ArrowRight, CheckCircle, Users, Award, Zap } from "lucide-react";
+import { Code2, Brain, Cloud, Database, Globe, Smartphone, ArrowRight, CheckCircle, Users, Award, Zap, Target, Rocket } from "lucide-react";
 import Footer from "../components/Footer";
 
 const navLinks = [
@@ -129,7 +129,9 @@ export default function SoftwareHome() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
           <motion.div initial={{opacity:0, x:-30}} whileInView={{opacity:1, x:0}} viewport={{once:true}}
             className="p-8 rounded-2xl" style={{background:'rgba(16,185,129,0.06)', border:'1px solid rgba(16,185,129,0.2)'}}>
-            <div className="text-4xl mb-4">🎯</div>
+            <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-4" style={{background:'rgba(16,185,129,0.15)'}}>
+              <Target size={24} className="text-teal-400"/>
+            </div>
             <h3 className="text-2xl font-bold font-space gradient-text-teal mb-4">Our Vision</h3>
             <p className="text-gray-300 leading-relaxed">To be India's most impactful software training institute, producing world-class developers who build solutions that matter.</p>
             <div className="mt-6 flex flex-col gap-2">
@@ -142,7 +144,9 @@ export default function SoftwareHome() {
           </motion.div>
           <motion.div initial={{opacity:0, x:30}} whileInView={{opacity:1, x:0}} viewport={{once:true}}
             className="p-8 rounded-2xl" style={{background:'rgba(124,58,237,0.06)', border:'1px solid rgba(124,58,237,0.2)'}}>
-            <div className="text-4xl mb-4">🚀</div>
+            <div className="w-12 h-12 rounded-2xl flex items-center justify-center mb-4" style={{background:'rgba(124,58,237,0.15)'}}>
+              <Rocket size={24} className="text-purple-400"/>
+            </div>
             <h3 className="text-2xl font-bold font-space gradient-text-purple mb-4">Our Mission</h3>
             <p className="text-gray-300 leading-relaxed">Deliver hands-on, project-based training that bridges the gap between academic learning and real-world software development.</p>
             <div className="mt-6 flex flex-col gap-2">

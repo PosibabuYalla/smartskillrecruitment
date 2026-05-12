@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Navbar from "../../components/Navbar";
 import { WhatsAppButton, BackToTop } from "../../components/FloatingButtons";
-import { Target, Eye, CheckCircle } from "lucide-react";
+import { Target, Eye, CheckCircle, Users, Globe, Award, BookOpen } from "lucide-react";
 import Footer from "../../components/Footer";
 
 const navLinks = [
@@ -23,10 +23,10 @@ const team = [
 const techStack = ["React", "Next.js", "Node.js", "Python", "TensorFlow", "AWS", "Docker", "Kubernetes", "MongoDB", "PostgreSQL", "TypeScript", "GraphQL"];
 
 const visionCards = [
-  { emoji: "🎯", title: "Student-First", desc: "Every decision we make is centered around student success and career outcomes.", color: "#10B981" },
-  { emoji: "🔬", title: "Research-Driven", desc: "Curriculum updated quarterly based on industry trends and hiring patterns.", color: "#7C3AED" },
-  { emoji: "🤝", title: "Industry Connected", desc: "Direct partnerships with 100+ tech companies for placement and internships.", color: "#06B6D4" },
-  { emoji: "🌍", title: "Global Standards", desc: "Training aligned with international certifications and global best practices.", color: "#10B981" },
+  { icon: Users, title: "Student-First", desc: "Every decision we make is centered around student success and career outcomes.", color: "#10B981" },
+  { icon: BookOpen, title: "Research-Driven", desc: "Curriculum updated quarterly based on industry trends and hiring patterns.", color: "#7C3AED" },
+  { icon: Globe, title: "Industry Connected", desc: "Direct partnerships with 100+ tech companies for placement and internships.", color: "#06B6D4" },
+  { icon: Award, title: "Global Standards", desc: "Training aligned with international certifications and global best practices.", color: "#10B981" },
 ];
 
 export default function SoftwareAbout() {
@@ -87,15 +87,20 @@ export default function SoftwareAbout() {
             Our Core Values
           </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-            {visionCards.map((c, i) => (
+            {visionCards.map((c, i) => {
+              const Icon = c.icon;
+              return (
               <motion.div key={i} initial={{opacity:0, y:30}} whileInView={{opacity:1, y:0}} viewport={{once:true}} transition={{delay:i*0.1}}
                 className="p-6 rounded-2xl text-center card-hover"
                 style={{background:`${c.color}06`, border:`1px solid ${c.color}20`}}>
-                <div className="text-4xl mb-4">{c.emoji}</div>
+                <div className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-4" style={{background:`${c.color}18`, color:c.color}}>
+                  <Icon size={22}/>
+                </div>
                 <h3 className="font-bold font-space text-white mb-2">{c.title}</h3>
                 <p className="text-gray-400 text-sm">{c.desc}</p>
               </motion.div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

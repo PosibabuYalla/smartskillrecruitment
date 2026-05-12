@@ -3,7 +3,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "../../components/Navbar";
 import { WhatsAppButton, BackToTop } from "../../components/FloatingButtons";
-import { CheckCircle, ChevronRight } from "lucide-react";
+import { CheckCircle, ChevronRight, Rocket, Target, Briefcase, TrendingUp } from "lucide-react";
 import Footer from "../../components/Footer";
 
 const navLinks = [
@@ -57,7 +57,9 @@ export default function SoftwareEnroll() {
           {done ? (
             <motion.div initial={{opacity:0, scale:0.9}} animate={{opacity:1, scale:1}}
               className="text-center py-16 rounded-2xl" style={{background:'rgba(16,185,129,0.06)', border:'1px solid rgba(16,185,129,0.2)'}}>
-              <div className="text-6xl mb-4">🚀</div>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{background:'rgba(16,185,129,0.15)'}}>
+                <Rocket size={32} className="text-teal-400"/>
+              </div>
               <h2 className="text-3xl font-bold font-space gradient-text-teal mb-3">You're Enrolled!</h2>
               <p className="text-gray-300 mb-2">Welcome, <strong className="text-teal-400">{data.name}</strong>!</p>
               <p className="text-gray-400 text-sm">Our team will reach you at <strong>{data.phone}</strong> within 24 hours.</p>
@@ -147,15 +149,15 @@ export default function SoftwareEnroll() {
                       <label className="text-sm text-gray-400 mb-2 block">Primary Goal</label>
                       <div className="grid grid-cols-2 gap-3">
                         {[
-                          { v: "job", label: "🎯 Get a Job" },
-                          { v: "freelance", label: "💼 Freelancing" },
-                          { v: "startup", label: "🚀 Build Startup" },
-                          { v: "upskill", label: "📈 Upskill" },
+                          { v: "job", label: "Get a Job", icon: Briefcase },
+                          { v: "freelance", label: "Freelancing", icon: Target },
+                          { v: "startup", label: "Build Startup", icon: Rocket },
+                          { v: "upskill", label: "Upskill", icon: TrendingUp },
                         ].map(g => (
                           <button key={g.v} onClick={() => update("goal", g.v)}
-                            className="py-3 rounded-xl text-sm font-semibold transition-all"
+                            className="py-3 rounded-xl text-sm font-semibold transition-all flex items-center justify-center gap-2"
                             style={data.goal === g.v ? {background:'rgba(16,185,129,0.2)', border:'1px solid #10B981', color:'#10B981'} : {background:'rgba(255,255,255,0.05)', border:'1px solid rgba(255,255,255,0.1)', color:'#9CA3AF'}}>
-                            {g.label}
+                            <g.icon size={14}/> {g.label}
                           </button>
                         ))}
                       </div>

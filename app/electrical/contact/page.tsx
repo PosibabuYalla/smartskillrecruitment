@@ -3,7 +3,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import Navbar from "../../components/Navbar";
 import { WhatsAppButton, BackToTop } from "../../components/FloatingButtons";
-import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
 import Footer from "../../components/Footer";
 
 const navLinks = [
@@ -64,7 +64,9 @@ export default function ElectricalContact() {
             className="p-8 rounded-2xl" style={{background:'rgba(255,255,255,0.04)', border:'1px solid rgba(245,158,11,0.15)'}}>
             {sent ? (
               <div className="text-center py-12">
-                <div className="text-5xl mb-4">✅</div>
+                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{background:'rgba(245,158,11,0.15)'}}>
+                  <CheckCircle size={32} className="text-amber-400"/>
+                </div>
                 <h3 className="text-2xl font-bold font-rajdhani text-amber-400 mb-2">Message Sent!</h3>
                 <p className="text-gray-400">We'll get back to you within 24 hours.</p>
               </div>

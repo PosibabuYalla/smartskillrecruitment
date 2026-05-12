@@ -3,7 +3,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Navbar from "../../components/Navbar";
 import { WhatsAppButton, BackToTop } from "../../components/FloatingButtons";
-import { CheckCircle, ChevronRight } from "lucide-react";
+import { CheckCircle, ChevronRight, PartyPopper } from "lucide-react";
 import Footer from "../../components/Footer";
 
 const navLinks = [
@@ -14,7 +14,7 @@ const navLinks = [
   { label: "Contact", href: "/electrical/contact" },
 ];
 
-const courses = ["Cable Identification & Installation", "Panel Board Design & Assembly", "HT/LT Motors & Drives", "Industrial Protocols & Automation", "Electrical Safety & Compliance", "Renewable Energy Systems"];
+const courses = ["HT & LT Motors Training", "LEPB & Motor Control Systems", "Protocol Preparation & Documentation", "Power Transformer & Auxiliaries", "Industrial Electrical Safety", "Pre-Employment Career Program"];
 const batches = ["January 2025", "February 2025", "March 2025", "April 2025"];
 
 const steps = ["Personal Info", "Course Selection", "Review & Submit"];
@@ -58,7 +58,9 @@ export default function ElectricalEnroll() {
           {done ? (
             <motion.div initial={{opacity:0, scale:0.9}} animate={{opacity:1, scale:1}}
               className="text-center py-16 rounded-2xl" style={{background:'rgba(245,158,11,0.06)', border:'1px solid rgba(245,158,11,0.2)'}}>
-              <div className="text-6xl mb-4">🎉</div>
+              <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{background:'rgba(245,158,11,0.15)'}}>
+                <PartyPopper size={32} className="text-amber-400"/>
+              </div>
               <h2 className="text-3xl font-bold font-rajdhani gradient-text-amber mb-3">Enrollment Submitted!</h2>
               <p className="text-gray-300 mb-2">Thank you, <strong className="text-amber-400">{data.name}</strong>!</p>
               <p className="text-gray-400 text-sm">Our team will contact you at <strong>{data.phone}</strong> within 24 hours.</p>

@@ -16,6 +16,7 @@ const navLinks = [
 
 const courses = [
   {
+    slug: "python-full-stack",
     icon: <Code2 size={32}/>, title: "Python Full Stack",
     duration: "4 Months", students: "200+", color: "#10B981",
     gradient: "linear-gradient(135deg, #10B981, #06B6D4)",
@@ -25,6 +26,7 @@ const courses = [
     outcomes: ["Python Developer", "Full Stack Developer", "Backend Engineer"],
   },
   {
+    slug: "mern-stack",
     icon: <Globe size={32}/>, title: "MERN Stack",
     duration: "4 Months", students: "180+", color: "#06B6D4",
     gradient: "linear-gradient(135deg, #06B6D4, #3B82F6)",
@@ -34,6 +36,7 @@ const courses = [
     outcomes: ["MERN Developer", "Frontend Engineer", "Backend Developer"],
   },
   {
+    slug: "ai-machine-learning",
     icon: <Brain size={32}/>, title: "AI & Machine Learning",
     duration: "5 Months", students: "150+", color: "#7C3AED",
     gradient: "linear-gradient(135deg, #7C3AED, #EC4899)",
@@ -43,6 +46,7 @@ const courses = [
     outcomes: ["ML Engineer", "AI Developer", "Data Scientist"],
   },
   {
+    slug: "data-science",
     icon: <Database size={32}/>, title: "Data Science",
     duration: "4 Months", students: "130+", color: "#10B981",
     gradient: "linear-gradient(135deg, #10B981, #84CC16)",
@@ -52,6 +56,7 @@ const courses = [
     outcomes: ["Data Analyst", "Business Analyst", "BI Developer"],
   },
   {
+    slug: "digital-marketing",
     icon: <Smartphone size={32}/>, title: "Digital Marketing",
     duration: "2 Months", students: "220+", color: "#F59E0B",
     gradient: "linear-gradient(135deg, #F59E0B, #EF4444)",
@@ -61,6 +66,7 @@ const courses = [
     outcomes: ["Digital Marketer", "SEO Specialist", "Social Media Manager"],
   },
   {
+    slug: "java-full-stack",
     icon: <Code2 size={32}/>, title: "Java Full Stack",
     duration: "5 Months", students: "160+", color: "#EF4444",
     gradient: "linear-gradient(135deg, #EF4444, #F97316)",
@@ -144,7 +150,7 @@ export default function SoftwareCourses() {
                     style={{background:c.gradient}}>
                     Enroll Now
                   </Link>
-                  <Link href={`/software/courses/${c.title.toLowerCase().replace(/\s+/g,'-')}`}
+                  <Link href={`/software/courses/${c.slug}`}
                     className="flex items-center gap-1 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all hover:bg-white/5"
                     style={{border:`1px solid ${c.color}30`, color:c.color}}>
                     Details <ArrowRight size={13}/>

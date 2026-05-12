@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import { WhatsAppButton, BackToTop } from "../../components/FloatingButtons";
-import { ChevronDown, Clock, Users, Award, CheckCircle } from "lucide-react";
+import { ChevronDown, Clock, Users, Award, CheckCircle, ArrowRight } from "lucide-react";
 import Footer from "../../components/Footer";
 
 const navLinks = [
@@ -17,6 +17,7 @@ const navLinks = [
 
 const courses = [
   {
+    slug: "ht-lt-motors",
     title: "HT and LT Motors Training",
     duration: "6 Weeks", students: "200+", level: "Intermediate",
     desc: "Comprehensive hands-on training on High Tension and Low Tension motors used in industrial power plants and substations.",
@@ -24,6 +25,7 @@ const courses = [
     badge: "Core",
   },
   {
+    slug: "lepb-motor-control",
     title: "LEPB & Motor Control Systems",
     duration: "4 Weeks", students: "150+", level: "Intermediate",
     desc: "Master Local Emergency Push Button (LEPB) operations, tripping, closing sequences, and motor control panel operations.",
@@ -31,6 +33,7 @@ const courses = [
     badge: "Advanced",
   },
   {
+    slug: "protocol-preparation",
     title: "Protocol Preparation & Documentation",
     duration: "3 Weeks", students: "180+", level: "All Levels",
     desc: "Learn to prepare industry-standard electrical protocols, maintenance records, and commissioning documents required in power plants.",
@@ -38,6 +41,7 @@ const courses = [
     badge: "Foundation",
   },
   {
+    slug: "power-transformer",
     title: "Power Transformer & Auxiliaries",
     duration: "5 Weeks", students: "120+", level: "Advanced",
     desc: "In-depth training on power transformer maintenance, testing, and auxiliary systems used in substations and power plants.",
@@ -45,6 +49,7 @@ const courses = [
     badge: "Specialist",
   },
   {
+    slug: "electrical-safety",
     title: "Industrial Electrical Safety",
     duration: "2 Weeks", students: "300+", level: "All Levels",
     desc: "Essential safety training for B.Tech, Diploma, and ITI electrical students entering thermal power plants, substations, and O&M plants.",
@@ -52,6 +57,7 @@ const courses = [
     badge: "Safety",
   },
   {
+    slug: "pre-employment-career",
     title: "Pre-Employment Career Awareness Program",
     duration: "2 Weeks", students: "500+", level: "Beginner",
     desc: "Career guidelines and awareness training for B.Tech, Diploma, and ITI Electrical students about the industrial sector and job placement assistance.",
@@ -103,11 +109,18 @@ function CourseCard({ course, index }: { course: typeof courses[0]; index: numbe
                   </div>
                 ))}
               </div>
-              <Link href="/electrical/enroll"
-                className="inline-block px-6 py-2.5 rounded-full text-sm font-bold text-black transition-transform hover:scale-105"
-                style={{background:'linear-gradient(135deg, #F59E0B, #D97706)'}}>
-                Enroll in This Course
-              </Link>
+              <div className="flex gap-3">
+                <Link href="/electrical/enroll"
+                  className="inline-block px-6 py-2.5 rounded-full text-sm font-bold text-black transition-transform hover:scale-105"
+                  style={{background:'linear-gradient(135deg, #F59E0B, #D97706)'}}>
+                  Enroll in This Course
+                </Link>
+                <Link href={`/electrical/courses/${course.slug}`}
+                  className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full text-sm font-semibold text-amber-400 transition-all hover:bg-amber-400/10"
+                  style={{border:'1px solid rgba(245,158,11,0.3)'}}>
+                  View Details <ArrowRight size={13}/>
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}

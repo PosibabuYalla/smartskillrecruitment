@@ -2,9 +2,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-import { WhatsAppButton, BackToTop } from "./FloatingButtons";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
+import { WhatsAppButton, BackToTop } from "../FloatingButtons";
 import { CheckCircle, ChevronDown, Star, Users, Clock, Award, Zap, ArrowRight, BookOpen, Target, Briefcase } from "lucide-react";
 
 export interface CourseData {

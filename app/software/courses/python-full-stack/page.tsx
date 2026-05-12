@@ -1,5 +1,5 @@
-import CourseDetail from "../../components/CourseDetail";
-import type { CourseData } from "../../components/CourseDetail";
+import CourseDetail from "../../../components/CourseDetail";
+import type { CourseData } from "../../../components/CourseDetail";
 
 const data: CourseData = {
   theme: "software", slug: "python-full-stack",

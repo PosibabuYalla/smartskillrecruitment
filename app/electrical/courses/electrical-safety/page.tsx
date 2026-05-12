@@ -1,5 +1,8 @@
-import CourseDetail from "../../../components/CourseDetail";
-import type { CourseData } from "../../../components/CourseDetail";
+import CourseDetail, {
+  Shield, AlertTriangle, HardHat, ClipboardList,
+  Wrench, Bolt, Award, Target, Factory, BookOpen, BadgeCheck,
+  type CourseData,
+} from "../../../components/CourseDetail";
 
 const data: CourseData = {
   theme: "electrical", slug: "electrical-safety",
@@ -24,10 +27,10 @@ const data: CourseData = {
     "Incident reporting & investigation procedures",
   ],
   technologies: [
-    { name: "PPE Equipment", icon: "🦺" }, { name: "LOTO Devices", icon: "🔒" }, { name: "Arc Flash PPE", icon: "⚡" },
-    { name: "Safety Meters", icon: "🔢" }, { name: "Voltage Detector", icon: "🔍" }, { name: "Earthing Kit", icon: "🌍" },
-    { name: "Safety Signs", icon: "⚠️" }, { name: "Fire Extinguisher", icon: "🧯" }, { name: "First Aid Kit", icon: "🏥" },
-    { name: "PTW System", icon: "📋" }, { name: "Risk Assessment", icon: "📊" }, { name: "Incident Forms", icon: "📝" },
+    { name: "PPE Equipment", icon: HardHat }, { name: "LOTO Devices", icon: Shield }, { name: "Arc Flash PPE", icon: Bolt },
+    { name: "Safety Meters", icon: Wrench }, { name: "Voltage Detector", icon: AlertTriangle }, { name: "Earthing Kit", icon: Bolt },
+    { name: "Safety Signs", icon: AlertTriangle }, { name: "Fire Extinguisher", icon: Shield }, { name: "First Aid Kit", icon: Award },
+    { name: "PTW System", icon: ClipboardList }, { name: "Risk Assessment", icon: ClipboardList }, { name: "Incident Forms", icon: ClipboardList },
   ],
   outcomes: [
     { role: "Safety Officer (Electrical)", salary: "₹3L – ₹8L" },
@@ -38,10 +41,10 @@ const data: CourseData = {
     { role: "HSE Engineer", salary: "₹4L – ₹10L" },
   ],
   whyChoose: [
-    { icon: "🛡️", title: "Mandatory Knowledge", desc: "No power plant or substation will hire without basic electrical safety certification." },
-    { icon: "⚡", title: "Life-Saving Skills", desc: "Learn procedures that prevent accidents and save lives in industrial environments." },
-    { icon: "📋", title: "Compliance Ready", desc: "Understand all statutory safety requirements for electrical installations in India." },
-    { icon: "🏆", title: "Interview Advantage", desc: "Safety knowledge is the first thing interviewers test for plant & substation roles." },
+    { icon: Shield, title: "Mandatory Knowledge", desc: "No power plant or substation will hire without basic electrical safety certification." },
+    { icon: Bolt, title: "Life-Saving Skills", desc: "Learn procedures that prevent accidents and save lives in industrial environments." },
+    { icon: BadgeCheck, title: "Compliance Ready", desc: "Understand all statutory safety requirements for electrical installations in India." },
+    { icon: Award, title: "Interview Advantage", desc: "Safety knowledge is the first thing interviewers test for plant & substation roles." },
   ],
   projects: [
     { title: "Risk Assessment Report", desc: "Conduct a complete electrical risk assessment for a simulated substation maintenance activity.", tech: ["Risk Matrix", "IS Standards", "Documentation"] },

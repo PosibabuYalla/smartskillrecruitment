@@ -1,5 +1,8 @@
-import CourseDetail from "../../../components/CourseDetail";
-import type { CourseData } from "../../../components/CourseDetail";
+import CourseDetail, {
+  FileText, ClipboardList, Shield, Settings, Wrench,
+  BookOpen, Award, Target, HardHat, Factory, BadgeCheck,
+  type CourseData,
+} from "../../../components/CourseDetail";
 
 const data: CourseData = {
   theme: "electrical", slug: "protocol-preparation",
@@ -24,10 +27,10 @@ const data: CourseData = {
     "Digital documentation & filing systems",
   ],
   technologies: [
-    { name: "MS Word", icon: "📝" }, { name: "MS Excel", icon: "📊" }, { name: "PDF Tools", icon: "📄" },
-    { name: "SAP PM Basics", icon: "💼" }, { name: "CMMS", icon: "🖥️" }, { name: "AutoCAD Basics", icon: "📐" },
-    { name: "Permit System", icon: "🔒" }, { name: "ISO Standards", icon: "📋" }, { name: "IEC Standards", icon: "⚡" },
-    { name: "IS Standards", icon: "🇮🇳" }, { name: "Checklist Tools", icon: "✅" }, { name: "Report Templates", icon: "📑" },
+    { name: "MS Word", icon: FileText }, { name: "MS Excel", icon: ClipboardList }, { name: "PDF Tools", icon: FileText },
+    { name: "SAP PM Basics", icon: Settings }, { name: "CMMS", icon: Settings }, { name: "AutoCAD Basics", icon: Wrench },
+    { name: "Permit System", icon: Shield }, { name: "ISO Standards", icon: BadgeCheck }, { name: "IEC Standards", icon: BadgeCheck },
+    { name: "IS Standards", icon: BadgeCheck }, { name: "Checklist Tools", icon: ClipboardList }, { name: "Report Templates", icon: FileText },
   ],
   outcomes: [
     { role: "Electrical Engineer (O&M)", salary: "₹3L – ₹7L" },
@@ -38,10 +41,10 @@ const data: CourseData = {
     { role: "Electrical Supervisor", salary: "₹4L – ₹9L" },
   ],
   whyChoose: [
-    { icon: "📋", title: "Industry Standard Formats", desc: "Learn the exact protocol formats used by NTPC, BHEL, L&T & private power plants." },
-    { icon: "✅", title: "Compliance Ready", desc: "Understand statutory & regulatory documentation requirements for electrical installations." },
-    { icon: "🏆", title: "Career Differentiator", desc: "Most engineers lack documentation skills — this makes you stand out in interviews." },
-    { icon: "🔒", title: "Safety First", desc: "Master permit-to-work systems that prevent accidents and save lives." },
+    { icon: ClipboardList, title: "Industry Standard Formats", desc: "Learn the exact protocol formats used by NTPC, BHEL, L&T & private power plants." },
+    { icon: BadgeCheck, title: "Compliance Ready", desc: "Understand statutory & regulatory documentation requirements for electrical installations." },
+    { icon: Award, title: "Career Differentiator", desc: "Most engineers lack documentation skills — this makes you stand out in interviews." },
+    { icon: Shield, title: "Safety First", desc: "Master permit-to-work systems that prevent accidents and save lives." },
   ],
   projects: [
     { title: "Motor Testing Protocol", desc: "Prepare a complete testing protocol for a 3-phase induction motor including IR, PI, winding resistance & functional tests.", tech: ["MS Word", "Excel", "IS Standards"] },

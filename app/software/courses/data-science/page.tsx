@@ -1,5 +1,8 @@
-import CourseDetail from "../../../components/CourseDetail";
-import type { CourseData } from "../../../components/CourseDetail";
+import CourseDetail, {
+  Code2, Database, Globe, Server, GitBranch, Cloud, Shield, Layers,
+  Monitor, Settings, Cpu, Wrench, Award, Rocket, Target, BookOpen,
+  BarChart2, Brain, FlaskConical, type CourseData,
+} from "../../../components/CourseDetail";
 
 const data: CourseData = {
   theme: "software", slug: "data-science",
@@ -8,7 +11,7 @@ const data: CourseData = {
   heroImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1600&q=80",
   duration: "6–8 or 8–12 Months", students: "130+", level: "Beginner → Advanced", rating: 4.8,
   color: "#10B981", gradient: "linear-gradient(135deg, #10B981, #84CC16)",
-  overview: "A complete data science program covering Python, SQL, statistics, machine learning, and business intelligence tools. Available in two tracks: 6–8 Month Standard (₹40,000) and 8–12 Month Advanced (₹60,000). Learn to collect, clean, analyze, and visualize data to drive real business decisions.",
+  overview: "A complete data science program available in two tracks: 6–8 Month Standard (₹40,000) and 8–12 Month Advanced (₹60,000). Covers Python, SQL, statistics, machine learning, and business intelligence tools to drive real business decisions.",
   learns: [
     "Python programming for data analysis",
     "SQL — advanced queries, joins, window functions",
@@ -24,10 +27,10 @@ const data: CourseData = {
     "Excel advanced analytics & pivot tables",
   ],
   technologies: [
-    { name: "Python", icon: "🐍" }, { name: "SQL", icon: "🗄️" }, { name: "Tableau", icon: "📊" },
-    { name: "Power BI", icon: "💹" }, { name: "Pandas", icon: "🐼" }, { name: "NumPy", icon: "🔢" },
-    { name: "Matplotlib", icon: "📈" }, { name: "Scikit-learn", icon: "🤖" }, { name: "Excel", icon: "📋" },
-    { name: "PySpark", icon: "⚡" }, { name: "Jupyter", icon: "📓" }, { name: "Git", icon: "🔀" },
+    { name: "Python", icon: Code2 }, { name: "SQL", icon: Database }, { name: "Tableau", icon: BarChart2 },
+    { name: "Power BI", icon: Monitor }, { name: "Pandas", icon: Layers }, { name: "NumPy", icon: Cpu },
+    { name: "Matplotlib", icon: Globe }, { name: "Scikit-learn", icon: Brain }, { name: "Excel", icon: Settings },
+    { name: "PySpark", icon: Cloud }, { name: "Jupyter", icon: BookOpen }, { name: "Git", icon: GitBranch },
   ],
   outcomes: [
     { role: "Data Analyst", salary: "₹4L – ₹12L" },
@@ -38,10 +41,10 @@ const data: CourseData = {
     { role: "Research Analyst", salary: "₹4L – ₹10L" },
   ],
   whyChoose: [
-    { icon: "📊", title: "Real Datasets", desc: "Work with actual business datasets from e-commerce, finance & healthcare." },
-    { icon: "🏢", title: "Industry Tools", desc: "Learn the exact tools used by analysts at Amazon, Flipkart & startups." },
-    { icon: "💡", title: "Business Focus", desc: "Learn to translate data insights into actionable business recommendations." },
-    { icon: "🎯", title: "Placement Ready", desc: "Build a portfolio of 5 projects that impress hiring managers." },
+    { icon: BarChart2, title: "Real Datasets", desc: "Work with actual business datasets from e-commerce, finance & healthcare." },
+    { icon: Wrench, title: "Industry Tools", desc: "Learn the exact tools used by analysts at Amazon, Flipkart & startups." },
+    { icon: Target, title: "Business Focus", desc: "Learn to translate data insights into actionable business recommendations." },
+    { icon: Rocket, title: "Placement Ready", desc: "Build a portfolio of 5 projects that impress hiring managers." },
   ],
   projects: [
     { title: "Sales Analytics Dashboard", desc: "Interactive Tableau dashboard analyzing 3 years of sales data with KPI tracking & forecasting.", tech: ["Tableau", "SQL", "Python", "Excel"] },

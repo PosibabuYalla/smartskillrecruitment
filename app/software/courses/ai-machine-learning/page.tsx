@@ -1,5 +1,8 @@
-import CourseDetail from "../../../components/CourseDetail";
-import type { CourseData } from "../../../components/CourseDetail";
+import CourseDetail, {
+  Code2, Database, Globe, Server, GitBranch, Cloud, Shield, Layers,
+  Monitor, Settings, Cpu, Wrench, Award, Rocket, Target, BookOpen,
+  Brain, BarChart2, FlaskConical, type CourseData,
+} from "../../../components/CourseDetail";
 
 const data: CourseData = {
   theme: "software", slug: "ai-machine-learning",
@@ -24,10 +27,10 @@ const data: CourseData = {
     "Ethics in AI & responsible ML practices",
   ],
   technologies: [
-    { name: "Python", icon: "🐍" }, { name: "TensorFlow", icon: "🔶" }, { name: "PyTorch", icon: "🔥" },
-    { name: "Scikit-learn", icon: "🤖" }, { name: "OpenCV", icon: "👁️" }, { name: "Pandas", icon: "🐼" },
-    { name: "NumPy", icon: "🔢" }, { name: "Hugging Face", icon: "🤗" }, { name: "MLflow", icon: "📊" },
-    { name: "AWS SageMaker", icon: "☁️" }, { name: "Jupyter", icon: "📓" }, { name: "Docker", icon: "🐳" },
+    { name: "Python", icon: Code2 }, { name: "TensorFlow", icon: Brain }, { name: "PyTorch", icon: Cpu },
+    { name: "Scikit-learn", icon: Settings }, { name: "OpenCV", icon: Monitor }, { name: "Pandas", icon: Database },
+    { name: "NumPy", icon: BarChart2 }, { name: "Hugging Face", icon: Layers }, { name: "MLflow", icon: FlaskConical },
+    { name: "AWS SageMaker", icon: Cloud }, { name: "Jupyter", icon: BookOpen }, { name: "Docker", icon: Shield },
   ],
   outcomes: [
     { role: "ML Engineer", salary: "₹7L – ₹20L" },
@@ -38,10 +41,10 @@ const data: CourseData = {
     { role: "MLOps Engineer", salary: "₹9L – ₹26L" },
   ],
   whyChoose: [
-    { icon: "🧠", title: "Real AI Projects", desc: "Work on projects using real datasets from Kaggle, UCI & industry partners." },
-    { icon: "🔬", title: "Research + Industry", desc: "Balance between academic understanding and production-ready implementation." },
-    { icon: "🌍", title: "Global Demand", desc: "AI/ML engineers are the highest-paid professionals in tech globally." },
-    { icon: "🎓", title: "Expert Mentors", desc: "Learn from practitioners with experience at top AI research labs & companies." },
+    { icon: FlaskConical, title: "Real AI Projects", desc: "Work on projects using real datasets from Kaggle, UCI & industry partners." },
+    { icon: Brain, title: "Research + Industry", desc: "Balance between academic understanding and production-ready implementation." },
+    { icon: Globe, title: "Global Demand", desc: "AI/ML engineers are the highest-paid professionals in tech globally." },
+    { icon: Award, title: "Expert Mentors", desc: "Learn from practitioners with experience at top AI research labs & companies." },
   ],
   projects: [
     { title: "Sentiment Analysis Engine", desc: "NLP model that classifies customer reviews with 95%+ accuracy using BERT transformers.", tech: ["Python", "Hugging Face", "FastAPI", "Docker"] },

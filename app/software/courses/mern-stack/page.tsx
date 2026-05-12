@@ -1,5 +1,8 @@
-import CourseDetail from "../../../components/CourseDetail";
-import type { CourseData } from "../../../components/CourseDetail";
+import CourseDetail, {
+  Code2, Database, Globe, Server, GitBranch, Cloud, Shield, Layers,
+  Monitor, Settings, Cpu, Wrench, Award, Rocket, Target, BookOpen,
+  type CourseData,
+} from "../../../components/CourseDetail";
 
 const data: CourseData = {
   theme: "software", slug: "mern-stack",
@@ -24,10 +27,10 @@ const data: CourseData = {
     "Docker, CI/CD & cloud deployment",
   ],
   technologies: [
-    { name: "MongoDB", icon: "🍃" }, { name: "Express", icon: "⚡" }, { name: "React", icon: "⚛️" },
-    { name: "Node.js", icon: "🟢" }, { name: "Next.js", icon: "▲" }, { name: "TypeScript", icon: "🔷" },
-    { name: "GraphQL", icon: "🔺" }, { name: "Redis", icon: "🔴" }, { name: "Socket.io", icon: "🔌" },
-    { name: "Docker", icon: "🐳" }, { name: "AWS", icon: "☁️" }, { name: "Git", icon: "🔀" },
+    { name: "MongoDB", icon: Database }, { name: "Express", icon: Server }, { name: "React", icon: Monitor },
+    { name: "Node.js", icon: Cpu }, { name: "Next.js", icon: Layers }, { name: "TypeScript", icon: Code2 },
+    { name: "GraphQL", icon: Globe }, { name: "Redis", icon: Settings }, { name: "Socket.io", icon: Wrench },
+    { name: "Docker", icon: Shield }, { name: "AWS", icon: Cloud }, { name: "Git", icon: GitBranch },
   ],
   outcomes: [
     { role: "MERN Developer", salary: "₹5L – ₹14L" },
@@ -38,10 +41,10 @@ const data: CourseData = {
     { role: "Node.js Developer", salary: "₹5L – ₹13L" },
   ],
   whyChoose: [
-    { icon: "🌐", title: "Most In-Demand Stack", desc: "MERN is the #1 requested skill set in Indian & global job postings." },
-    { icon: "⚡", title: "One Language — Full Stack", desc: "JavaScript everywhere — frontend, backend & database queries." },
-    { icon: "🚀", title: "Production Projects", desc: "Build & deploy 5 real apps that go live on the internet." },
-    { icon: "💼", title: "100% Placement Help", desc: "Direct referrals to 50+ hiring partners across India." },
+    { icon: Globe, title: "Most In-Demand Stack", desc: "MERN is the #1 requested skill set in Indian & global job postings." },
+    { icon: Code2, title: "One Language — Full Stack", desc: "JavaScript everywhere — frontend, backend & database queries." },
+    { icon: Rocket, title: "Production Projects", desc: "Build & deploy 5 real apps that go live on the internet." },
+    { icon: Target, title: "100% Placement Help", desc: "Direct referrals to 50+ hiring partners across India." },
   ],
   projects: [
     { title: "Real-Time Chat App", desc: "WhatsApp-like messaging app with rooms, typing indicators & file sharing.", tech: ["React", "Node.js", "Socket.io", "MongoDB"] },

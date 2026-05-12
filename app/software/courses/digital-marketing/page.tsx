@@ -1,5 +1,8 @@
-import CourseDetail from "../../../components/CourseDetail";
-import type { CourseData } from "../../../components/CourseDetail";
+import CourseDetail, {
+  Globe, Search, Mail, Megaphone, BarChart2, Monitor, Settings,
+  Smartphone, Cloud, Wrench, Award, Rocket, Target, TrendingUp,
+  type CourseData,
+} from "../../../components/CourseDetail";
 
 const data: CourseData = {
   theme: "software", slug: "digital-marketing",
@@ -24,10 +27,10 @@ const data: CourseData = {
     "Freelancing & agency business setup",
   ],
   technologies: [
-    { name: "Google Ads", icon: "🎯" }, { name: "Meta Ads", icon: "📘" }, { name: "SEO Tools", icon: "🔍" },
-    { name: "GA4", icon: "📊" }, { name: "Mailchimp", icon: "📧" }, { name: "Canva", icon: "🎨" },
-    { name: "Semrush", icon: "🔎" }, { name: "Ahrefs", icon: "🔗" }, { name: "HubSpot", icon: "🧲" },
-    { name: "WordPress", icon: "🌐" }, { name: "Hootsuite", icon: "📱" }, { name: "YouTube", icon: "▶️" },
+    { name: "Google Ads", icon: Search }, { name: "Meta Ads", icon: Megaphone }, { name: "SEO Tools", icon: Globe },
+    { name: "GA4", icon: BarChart2 }, { name: "Mailchimp", icon: Mail }, { name: "Canva", icon: Monitor },
+    { name: "Semrush", icon: Search }, { name: "Ahrefs", icon: TrendingUp }, { name: "HubSpot", icon: Settings },
+    { name: "WordPress", icon: Globe }, { name: "Hootsuite", icon: Smartphone }, { name: "YouTube", icon: Cloud },
   ],
   outcomes: [
     { role: "Digital Marketing Executive", salary: "₹2.5L – ₹7L" },
@@ -38,10 +41,10 @@ const data: CourseData = {
     { role: "Digital Marketing Freelancer", salary: "₹3L – ₹15L+" },
   ],
   whyChoose: [
-    { icon: "💰", title: "Live Ad Budgets", desc: "Run real Google & Meta ad campaigns with actual budgets during training." },
-    { icon: "📈", title: "Fastest Growing Field", desc: "Every business needs digital marketing — 10L+ jobs open in India." },
-    { icon: "🏠", title: "Work From Anywhere", desc: "Freelance or work remotely for clients across India & globally." },
-    { icon: "⚡", title: "2-Month Fast Track", desc: "Get job-ready in just 2 months with intensive hands-on training." },
+    { icon: Target, title: "Live Ad Budgets", desc: "Run real Google & Meta ad campaigns with actual budgets during training." },
+    { icon: TrendingUp, title: "Fastest Growing Field", desc: "Every business needs digital marketing — 10L+ jobs open in India." },
+    { icon: Globe, title: "Work From Anywhere", desc: "Freelance or work remotely for clients across India & globally." },
+    { icon: Rocket, title: "3-Month Fast Track", desc: "Get job-ready in just 3 months with intensive hands-on training." },
   ],
   projects: [
     { title: "SEO Campaign for Local Business", desc: "Rank a local business website on Google Page 1 for 10+ keywords using on-page & off-page SEO.", tech: ["Semrush", "Ahrefs", "WordPress", "Google Search Console"] },

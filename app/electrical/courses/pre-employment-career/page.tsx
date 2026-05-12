@@ -1,5 +1,8 @@
-import CourseDetail from "../../../components/CourseDetail";
-import type { CourseData } from "../../../components/CourseDetail";
+import CourseDetail, {
+  GraduationCap, Briefcase, Target, TrendingUp, BookOpen,
+  Award, Rocket, Users, ClipboardList, BadgeCheck, Globe, Factory,
+  type CourseData,
+} from "../../../components/CourseDetail";
 
 const data: CourseData = {
   theme: "electrical", slug: "pre-employment-career",
@@ -24,10 +27,10 @@ const data: CourseData = {
     "Career growth roadmap in the power sector",
   ],
   technologies: [
-    { name: "MS Word", icon: "📝" }, { name: "LinkedIn", icon: "💼" }, { name: "Naukri.com", icon: "🔍" },
-    { name: "Indeed", icon: "🌐" }, { name: "MS Excel", icon: "📊" }, { name: "PowerPoint", icon: "📑" },
-    { name: "Email Tools", icon: "📧" }, { name: "Video Interview", icon: "🎥" }, { name: "Job Portals", icon: "💻" },
-    { name: "Resume Builder", icon: "📋" }, { name: "Interview Prep", icon: "🎯" }, { name: "Aptitude Tests", icon: "🧠" },
+    { name: "MS Word", icon: ClipboardList }, { name: "LinkedIn", icon: Globe }, { name: "Naukri.com", icon: TrendingUp },
+    { name: "Indeed", icon: Globe }, { name: "MS Excel", icon: ClipboardList }, { name: "PowerPoint", icon: BookOpen },
+    { name: "Email Tools", icon: Globe }, { name: "Video Interview", icon: Users }, { name: "Job Portals", icon: TrendingUp },
+    { name: "Resume Builder", icon: ClipboardList }, { name: "Interview Prep", icon: Target }, { name: "Aptitude Tests", icon: GraduationCap },
   ],
   outcomes: [
     { role: "Electrical Trainee Engineer", salary: "₹2L – ₹4L" },
@@ -38,10 +41,10 @@ const data: CourseData = {
     { role: "Graduate Apprentice (BHEL/NTPC)", salary: "₹3L – ₹5L" },
   ],
   whyChoose: [
-    { icon: "🎯", title: "Direct Placement", desc: "SSR Institute has placed 5000+ students in power plants & industries across India." },
-    { icon: "🏭", title: "Industry Connections", desc: "Direct tie-ups with thermal power plants, O&M companies & substations." },
-    { icon: "📋", title: "Complete Guidance", desc: "From resume to offer letter — we guide you through every step of the process." },
-    { icon: "🚀", title: "Fast Track Career", desc: "Get your first job in the power sector within 30-60 days of completing the program." },
+    { icon: Target, title: "Direct Placement", desc: "SSR Institute has placed 5000+ students in power plants & industries across India." },
+    { icon: Factory, title: "Industry Connections", desc: "Direct tie-ups with thermal power plants, O&M companies & substations." },
+    { icon: ClipboardList, title: "Complete Guidance", desc: "From resume to offer letter — we guide you through every step of the process." },
+    { icon: Rocket, title: "Fast Track Career", desc: "Get your first job in the power sector within 30-60 days of completing the program." },
   ],
   projects: [
     { title: "Professional Resume", desc: "Create a job-winning resume tailored for electrical engineering roles in power plants & substations.", tech: ["MS Word", "Resume Templates", "LinkedIn"] },

@@ -1,5 +1,8 @@
-import CourseDetail from "../../../components/CourseDetail";
-import type { CourseData } from "../../../components/CourseDetail";
+import CourseDetail, {
+  Bolt, Gauge, Wrench, Settings, Shield, Plug, Radio,
+  ClipboardList, Factory, HardHat, Award, Target, AlertTriangle,
+  type CourseData,
+} from "../../../components/CourseDetail";
 
 const data: CourseData = {
   theme: "electrical", slug: "lepb-motor-control",
@@ -24,10 +27,10 @@ const data: CourseData = {
     "Safety interlocks & permit-to-work systems",
   ],
   technologies: [
-    { name: "LEPB Panel", icon: "🔴" }, { name: "MCC Panel", icon: "⚡" }, { name: "Contactors", icon: "🔌" },
-    { name: "Relays", icon: "🔧" }, { name: "PLC Basics", icon: "💻" }, { name: "Multimeter", icon: "🔢" },
-    { name: "Control Wiring", icon: "🔗" }, { name: "Interlock Logic", icon: "🔒" }, { name: "HMI", icon: "🖥️" },
-    { name: "Timers", icon: "⏱️" }, { name: "Limit Switches", icon: "🎚️" }, { name: "Proximity Sensors", icon: "📡" },
+    { name: "LEPB Panel", icon: AlertTriangle }, { name: "MCC Panel", icon: Bolt }, { name: "Contactors", icon: Plug },
+    { name: "Relays", icon: Wrench }, { name: "PLC Basics", icon: Settings }, { name: "Multimeter", icon: Gauge },
+    { name: "Control Wiring", icon: Radio }, { name: "Interlock Logic", icon: Shield }, { name: "HMI", icon: Settings },
+    { name: "Timers", icon: Gauge }, { name: "Limit Switches", icon: Wrench }, { name: "Proximity Sensors", icon: Radio },
   ],
   outcomes: [
     { role: "Control Panel Technician", salary: "₹2.5L – ₹6L" },
@@ -38,10 +41,10 @@ const data: CourseData = {
     { role: "Electrical Supervisor", salary: "₹4L – ₹10L" },
   ],
   whyChoose: [
-    { icon: "🏭", title: "Plant-Ready Skills", desc: "Learn exactly what power plant operators do on day one of their job." },
-    { icon: "🔴", title: "Emergency Systems", desc: "Master critical safety systems that protect lives and equipment in plants." },
-    { icon: "📋", title: "Protocol Training", desc: "Learn to follow and prepare standard operating procedures for LEPB operations." },
-    { icon: "🎯", title: "Direct Placement", desc: "Graduates placed in thermal power plants, O&M companies across India." },
+    { icon: Factory, title: "Plant-Ready Skills", desc: "Learn exactly what power plant operators do on day one of their job." },
+    { icon: AlertTriangle, title: "Emergency Systems", desc: "Master critical safety systems that protect lives and equipment in plants." },
+    { icon: ClipboardList, title: "Protocol Training", desc: "Learn to follow and prepare standard operating procedures for LEPB operations." },
+    { icon: Target, title: "Direct Placement", desc: "Graduates placed in thermal power plants, O&M companies across India." },
   ],
   projects: [
     { title: "LEPB Panel Wiring", desc: "Wire a complete LEPB panel from scratch including emergency stop, reset & status indication circuits.", tech: ["Control Wiring", "Contactors", "Relays", "Indicators"] },

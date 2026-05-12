@@ -1,5 +1,8 @@
-import CourseDetail from "../../../components/CourseDetail";
-import type { CourseData } from "../../../components/CourseDetail";
+import CourseDetail, {
+  Bolt, Gauge, Wrench, Settings, FlaskConical, Shield,
+  ClipboardList, Factory, HardHat, Award, Target, BookOpen, Cpu,
+  type CourseData,
+} from "../../../components/CourseDetail";
 
 const data: CourseData = {
   theme: "electrical", slug: "power-transformer",
@@ -24,10 +27,10 @@ const data: CourseData = {
     "Transformer commissioning & shutdown procedures",
   ],
   technologies: [
-    { name: "TTR Meter", icon: "🔬" }, { name: "BDV Tester", icon: "🧪" }, { name: "Megger", icon: "⚡" },
-    { name: "Winding Tester", icon: "🔌" }, { name: "Oil Tester", icon: "💧" }, { name: "Thermal Camera", icon: "🌡️" },
-    { name: "Buchholz Relay", icon: "🔴" }, { name: "OLTC", icon: "⚙️" }, { name: "Protection Relay", icon: "🛡️" },
-    { name: "Power Analyzer", icon: "📊" }, { name: "Multimeter", icon: "🔢" }, { name: "Gas Analyzer", icon: "🔍" },
+    { name: "TTR Meter", icon: FlaskConical }, { name: "BDV Tester", icon: FlaskConical }, { name: "Megger", icon: Bolt },
+    { name: "Winding Tester", icon: Wrench }, { name: "Oil Tester", icon: FlaskConical }, { name: "Thermal Camera", icon: Gauge },
+    { name: "Buchholz Relay", icon: Shield }, { name: "OLTC", icon: Settings }, { name: "Protection Relay", icon: Shield },
+    { name: "Power Analyzer", icon: Gauge }, { name: "Multimeter", icon: Gauge }, { name: "Gas Analyzer", icon: Cpu },
   ],
   outcomes: [
     { role: "Substation Engineer", salary: "₹3.5L – ₹8L" },
@@ -38,10 +41,10 @@ const data: CourseData = {
     { role: "Commissioning Engineer", salary: "₹5L – ₹12L" },
   ],
   whyChoose: [
-    { icon: "⚡", title: "Real Transformer Training", desc: "Train on actual power transformers — not just theory or simulations." },
-    { icon: "🔬", title: "Advanced Testing Skills", desc: "Master TTR, BDV, winding resistance & PI tests that employers demand." },
-    { icon: "🏭", title: "Substation Ready", desc: "Directly applicable skills for substation & power plant maintenance roles." },
-    { icon: "🎯", title: "High Salary Potential", desc: "Transformer specialists command premium salaries in the power sector." },
+    { icon: Bolt, title: "Real Transformer Training", desc: "Train on actual power transformers — not just theory or simulations." },
+    { icon: FlaskConical, title: "Advanced Testing Skills", desc: "Master TTR, BDV, winding resistance & PI tests that employers demand." },
+    { icon: Factory, title: "Substation Ready", desc: "Directly applicable skills for substation & power plant maintenance roles." },
+    { icon: Award, title: "High Salary Potential", desc: "Transformer specialists command premium salaries in the power sector." },
   ],
   projects: [
     { title: "Transformer Oil Testing Report", desc: "Perform BDV, moisture content & acidity tests on transformer oil and prepare a complete test report.", tech: ["BDV Tester", "Oil Tester", "Gas Analyzer"] },

@@ -1,5 +1,8 @@
-import CourseDetail from "../../../components/CourseDetail";
-import type { CourseData } from "../../../components/CourseDetail";
+import CourseDetail, {
+  Code2, Database, Globe, Server, GitBranch, Cloud, Shield, Layers,
+  Monitor, Settings, Cpu, Wrench, Award, Rocket, Target, BookOpen,
+  type CourseData,
+} from "../../../components/CourseDetail";
 
 const data: CourseData = {
   theme: "software", slug: "java-full-stack",
@@ -24,10 +27,10 @@ const data: CourseData = {
     "JUnit 5 & Mockito for testing",
   ],
   technologies: [
-    { name: "Java", icon: "☕" }, { name: "Spring Boot", icon: "🍃" }, { name: "Spring Cloud", icon: "☁️" },
-    { name: "React", icon: "⚛️" }, { name: "MySQL", icon: "🗄️" }, { name: "Hibernate", icon: "🔶" },
-    { name: "Docker", icon: "🐳" }, { name: "Kubernetes", icon: "⚙️" }, { name: "Maven", icon: "📦" },
-    { name: "JUnit", icon: "✅" }, { name: "AWS", icon: "☁️" }, { name: "Git", icon: "🔀" },
+    { name: "Java", icon: Code2 }, { name: "Spring Boot", icon: Server }, { name: "Spring Cloud", icon: Cloud },
+    { name: "React", icon: Monitor }, { name: "MySQL", icon: Database }, { name: "Hibernate", icon: Layers },
+    { name: "Docker", icon: Shield }, { name: "Kubernetes", icon: Settings }, { name: "Maven", icon: Wrench },
+    { name: "JUnit", icon: Award }, { name: "AWS", icon: Cloud }, { name: "Git", icon: GitBranch },
   ],
   outcomes: [
     { role: "Java Developer", salary: "₹4L – ₹12L" },
@@ -38,10 +41,10 @@ const data: CourseData = {
     { role: "Software Engineer (MNC)", salary: "₹5L – ₹16L" },
   ],
   whyChoose: [
-    { icon: "🏢", title: "MNC Preferred Stack", desc: "Java is the #1 language used by TCS, Infosys, Wipro, Accenture & product companies." },
-    { icon: "🔒", title: "Enterprise Security", desc: "Learn Spring Security, OAuth2 & JWT — skills that command premium salaries." },
-    { icon: "🧩", title: "Microservices Ready", desc: "Master the architecture pattern used by Amazon, Netflix & Flipkart." },
-    { icon: "🎯", title: "Interview Focused", desc: "DSA in Java, system design & mock interviews for top MNC placements." },
+    { icon: Globe, title: "MNC Preferred Stack", desc: "Java is the #1 language used by TCS, Infosys, Wipro, Accenture & product companies." },
+    { icon: Shield, title: "Enterprise Security", desc: "Learn Spring Security, OAuth2 & JWT — skills that command premium salaries." },
+    { icon: Layers, title: "Microservices Ready", desc: "Master the architecture pattern used by Amazon, Netflix & Flipkart." },
+    { icon: Target, title: "Interview Focused", desc: "DSA in Java, system design & mock interviews for top MNC placements." },
   ],
   projects: [
     { title: "Banking Application", desc: "Full-featured banking system with accounts, transactions, loans & admin dashboard using Spring Boot.", tech: ["Spring Boot", "React", "MySQL", "Spring Security"] },

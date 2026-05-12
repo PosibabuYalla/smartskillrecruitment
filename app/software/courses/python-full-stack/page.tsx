@@ -1,5 +1,8 @@
-import CourseDetail from "../../../components/CourseDetail";
-import type { CourseData } from "../../../components/CourseDetail";
+import CourseDetail, {
+  Code2, Database, Globe, Server, GitBranch, Cloud, Shield, Layers,
+  Monitor, Settings, Cpu, Wrench, Award, Rocket, Target, BookOpen,
+  type CourseData,
+} from "../../../components/CourseDetail";
 
 const data: CourseData = {
   theme: "software", slug: "python-full-stack",
@@ -24,10 +27,10 @@ const data: CourseData = {
     "Resume building & interview preparation",
   ],
   technologies: [
-    { name: "Python", icon: "🐍" }, { name: "Django", icon: "🎸" }, { name: "Flask", icon: "🌶️" },
-    { name: "React", icon: "⚛️" }, { name: "MySQL", icon: "🗄️" }, { name: "PostgreSQL", icon: "🐘" },
-    { name: "REST API", icon: "🔗" }, { name: "Docker", icon: "🐳" }, { name: "AWS", icon: "☁️" },
-    { name: "Git", icon: "🔀" }, { name: "HTML/CSS", icon: "🎨" }, { name: "Bootstrap", icon: "🅱️" },
+    { name: "Python", icon: Code2 }, { name: "Django", icon: Server }, { name: "Flask", icon: Layers },
+    { name: "React", icon: Monitor }, { name: "MySQL", icon: Database }, { name: "PostgreSQL", icon: Database },
+    { name: "REST API", icon: Globe }, { name: "Docker", icon: Settings }, { name: "AWS", icon: Cloud },
+    { name: "Git", icon: GitBranch }, { name: "HTML/CSS", icon: Cpu }, { name: "Bootstrap", icon: Wrench },
   ],
   outcomes: [
     { role: "Python Developer", salary: "₹4L – ₹10L" },
@@ -38,10 +41,10 @@ const data: CourseData = {
     { role: "Software Engineer", salary: "₹5L – ₹15L" },
   ],
   whyChoose: [
-    { icon: "🏆", title: "Industry Curriculum", desc: "Curriculum designed with real hiring managers from top tech companies." },
-    { icon: "🛠️", title: "100% Hands-on", desc: "Every concept reinforced with live coding, assignments & real projects." },
-    { icon: "🎯", title: "Placement Support", desc: "Resume reviews, mock interviews & direct referrals to hiring partners." },
-    { icon: "♾️", title: "Lifetime Access", desc: "Access course materials, recordings & updates forever after enrollment." },
+    { icon: Award, title: "Industry Curriculum", desc: "Curriculum designed with real hiring managers from top tech companies." },
+    { icon: Wrench, title: "100% Hands-on", desc: "Every concept reinforced with live coding, assignments & real projects." },
+    { icon: Target, title: "Placement Support", desc: "Resume reviews, mock interviews & direct referrals to hiring partners." },
+    { icon: BookOpen, title: "Lifetime Access", desc: "Access course materials, recordings & updates forever after enrollment." },
   ],
   projects: [
     { title: "E-Commerce Platform", desc: "Full-featured online store with cart, payments, admin dashboard & order tracking.", tech: ["Django", "React", "PostgreSQL", "Stripe"] },

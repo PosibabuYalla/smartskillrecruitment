@@ -1,5 +1,8 @@
-import CourseDetail from "../../../components/CourseDetail";
-import type { CourseData } from "../../../components/CourseDetail";
+import CourseDetail, {
+  Bolt, Gauge, Wrench, Settings, FlaskConical, Shield,
+  ClipboardList, Factory, HardHat, Award, Target, BookOpen,
+  type CourseData,
+} from "../../../components/CourseDetail";
 
 const data: CourseData = {
   theme: "electrical", slug: "ht-lt-motors",
@@ -24,10 +27,10 @@ const data: CourseData = {
     "Preventive maintenance schedules & logs",
   ],
   technologies: [
-    { name: "Motor Checker", icon: "🔌" }, { name: "Megger", icon: "⚡" }, { name: "Multimeter", icon: "🔢" },
-    { name: "Tachometer", icon: "🔄" }, { name: "Clamp Meter", icon: "📏" }, { name: "IR Tester", icon: "🧪" },
-    { name: "Thermal Gun", icon: "🌡️" }, { name: "Vibration Meter", icon: "📳" }, { name: "LCR Meter", icon: "🔬" },
-    { name: "Phase Sequence", icon: "🔃" }, { name: "Power Analyzer", icon: "📊" }, { name: "Oscilloscope", icon: "📈" },
+    { name: "Motor Checker", icon: Settings }, { name: "Megger", icon: Bolt }, { name: "Multimeter", icon: Gauge },
+    { name: "Tachometer", icon: Gauge }, { name: "Clamp Meter", icon: Wrench }, { name: "IR Tester", icon: FlaskConical },
+    { name: "Thermal Gun", icon: Gauge }, { name: "Vibration Meter", icon: Settings }, { name: "LCR Meter", icon: FlaskConical },
+    { name: "Phase Sequence", icon: Bolt }, { name: "Power Analyzer", icon: Gauge }, { name: "Oscilloscope", icon: Settings },
   ],
   outcomes: [
     { role: "Electrical Technician", salary: "₹2.5L – ₹5L" },
@@ -38,10 +41,10 @@ const data: CourseData = {
     { role: "Electrical Supervisor", salary: "₹4L – ₹9L" },
   ],
   whyChoose: [
-    { icon: "🏭", title: "Real Equipment Training", desc: "Train on actual HT/LT motors, not just theory — same equipment used in power plants." },
-    { icon: "📋", title: "Protocol Based", desc: "Learn industry-standard testing protocols accepted by NTPC, BHEL & private plants." },
-    { icon: "🎯", title: "Job Placement", desc: "Direct placement assistance in thermal power plants & O&M companies across India." },
-    { icon: "👨‍🏫", title: "Expert Trainers", desc: "Trainers with 15+ years of hands-on experience in power plant operations." },
+    { icon: Factory, title: "Real Equipment Training", desc: "Train on actual HT/LT motors, not just theory — same equipment used in power plants." },
+    { icon: ClipboardList, title: "Protocol Based", desc: "Learn industry-standard testing protocols accepted by NTPC, BHEL & private plants." },
+    { icon: Target, title: "Job Placement", desc: "Direct placement assistance in thermal power plants & O&M companies across India." },
+    { icon: HardHat, title: "Expert Trainers", desc: "Trainers with 15+ years of hands-on experience in power plant operations." },
   ],
   projects: [
     { title: "Motor Testing Report", desc: "Complete IR, PI & winding resistance testing on a 3-phase induction motor with full documentation.", tech: ["Megger", "LCR Meter", "Multimeter"] },

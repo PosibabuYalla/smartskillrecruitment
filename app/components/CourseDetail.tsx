@@ -2,10 +2,18 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
-import Navbar from "../Navbar";
-import Footer from "../Footer";
-import { WhatsAppButton, BackToTop } from "../FloatingButtons";
-import { CheckCircle, ChevronDown, Star, Users, Clock, Award, Zap, ArrowRight, BookOpen, Target, Briefcase } from "lucide-react";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import { WhatsAppButton, BackToTop } from "./FloatingButtons";
+import {
+  CheckCircle, ChevronDown, Star, Users, Clock, Award, Zap, ArrowRight,
+  BookOpen, Target, Briefcase, Code2, Database, Globe, Brain, Cpu, Server,
+  Shield, Wrench, FileText, Layers, Monitor, Smartphone, Cloud, GitBranch,
+  BarChart2, Search, Mail, Megaphone, Settings, FlaskConical, Bolt,
+  Factory, HardHat, AlertTriangle, ClipboardList, Gauge, Plug, Radio,
+  TrendingUp, GraduationCap, BadgeCheck, Rocket, MessageSquare, Tag,
+  type LucideIcon,
+} from "lucide-react";
 
 export interface CourseData {
   theme: "electrical" | "software";
@@ -22,9 +30,9 @@ export interface CourseData {
   badge: string;
   overview: string;
   learns: string[];
-  technologies: { name: string; icon: string }[];
+  technologies: { name: string; icon: LucideIcon }[];
   outcomes: { role: string; salary: string }[];
-  whyChoose: { icon: string; title: string; desc: string }[];
+  whyChoose: { icon: LucideIcon; title: string; desc: string }[];
   projects: { title: string; desc: string; tech: string[] }[];
   syllabus: { module: string; topics: string[] }[];
   pricing: {
@@ -34,6 +42,16 @@ export interface CourseData {
     includes: string[];
   };
 }
+
+// Re-export all icons so course pages can import from one place
+export {
+  Code2, Database, Globe, Brain, Cpu, Server, Shield, Wrench, FileText,
+  Layers, Monitor, Smartphone, Cloud, GitBranch, BarChart2, Search, Mail,
+  Megaphone, Settings, FlaskConical, Bolt, Factory, HardHat, AlertTriangle,
+  ClipboardList, Gauge, Plug, Radio, TrendingUp, GraduationCap, BadgeCheck,
+  Rocket, MessageSquare, Tag, Award, Zap, Star, BookOpen, Target, Briefcase,
+  CheckCircle, Users, Clock,
+};
 
 const navLinksElec = [
   { label: "Home", href: "/electrical" },
@@ -53,17 +71,18 @@ const navLinksSoft = [
 function SyllabusItem({ mod, topics, accent }: { mod: string; topics: string[]; accent: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="rounded-2xl overflow-hidden" style={{ border: `1px solid ${accent}20`, background: "rgba(255,255,255,0.03)" }}>
+    <div className="rounded-2xl overflow-hidden"
+      style={{ border: `1px solid ${accent}20`, background: "rgba(255,255,255,0.03)" }}>
       <button onClick={() => setOpen(!open)}
         className="w-full flex items-center justify-between px-6 py-4 text-left hover:bg-white/5 transition-colors">
         <span className="font-semibold text-white text-sm">{mod}</span>
-        <ChevronDown size={18} className={`transition-transform flex-shrink-0`}
+        <ChevronDown size={18} className="flex-shrink-0 transition-transform"
           style={{ color: accent, transform: open ? "rotate(180deg)" : "rotate(0deg)" }} />
       </button>
       <AnimatePresence>
         {open && (
-          <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }} exit={{ height: 0, opacity: 0 }}
-            className="overflow-hidden">
+          <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }} className="overflow-hidden">
             <div className="px-6 pb-5 grid grid-cols-1 sm:grid-cols-2 gap-2 border-t border-white/5 pt-4">
               {topics.map((t, i) => (
                 <div key={i} className="flex items-start gap-2 text-sm text-gray-400">
@@ -79,6 +98,21 @@ function SyllabusItem({ mod, topics, accent }: { mod: string; topics: string[]; 
   );
 }
 
+function SectionHeader({ icon: Icon, title, accent, fontClass }:
+  { icon: LucideIcon; title: string; accent: string; fontClass: string }) {
+  return (
+    <div className="flex flex-col items-center text-center gap-3">
+      <div className="w-12 h-12 rounded-2xl flex items-center justify-center"
+        style={{ background: `${accent}18`, color: accent }}>
+        <Icon size={22} />
+      </div>
+      <h2 className={`text-4xl font-bold ${fontClass} text-white`}>{title}</h2>
+      <div className="w-16 h-1 rounded-full"
+        style={{ background: `linear-gradient(90deg, transparent, ${accent}, transparent)` }} />
+    </div>
+  );
+}
+
 export default function CourseDetail({ data }: { data: CourseData }) {
   const isElec = data.theme === "electrical";
   const accent = data.color;
@@ -87,7 +121,6 @@ export default function CourseDetail({ data }: { data: CourseData }) {
   const waPhone = isElec ? "919392606164" : "917799811611";
   const fontClass = isElec ? "font-rajdhani" : "font-space";
   const bg = isElec ? "#0A0F1E" : "#0D0D1A";
-
   const saved = data.pricing.original - data.pricing.offer;
   const savedPct = Math.round((saved / data.pricing.original) * 100);
 
@@ -99,13 +132,12 @@ export default function CourseDetail({ data }: { data: CourseData }) {
       <section className="relative min-h-[92vh] flex items-center overflow-hidden pt-20">
         <div className="absolute inset-0 bg-cover bg-center opacity-20"
           style={{ backgroundImage: `url('${data.heroImage}')` }} />
-        <div className="absolute inset-0" style={{ background: `linear-gradient(135deg, ${bg}F5 0%, ${bg}CC 60%, ${bg}99 100%)` }} />
-        {/* Glow orb */}
+        <div className="absolute inset-0"
+          style={{ background: `linear-gradient(135deg, ${bg}F5 0%, ${bg}CC 60%, ${bg}99 100%)` }} />
         <div className="absolute top-1/2 right-0 w-[600px] h-[600px] rounded-full opacity-10 blur-3xl pointer-events-none -translate-y-1/2"
           style={{ background: `radial-gradient(circle, ${accent}, transparent 70%)` }} />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-20 grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
-          {/* Left */}
           <div>
             <motion.div initial={{ opacity: 0, y: -16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
               className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold mb-5"
@@ -124,18 +156,17 @@ export default function CourseDetail({ data }: { data: CourseData }) {
               {data.tagline}
             </motion.p>
 
-            {/* Meta pills */}
             <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}
               className="flex flex-wrap gap-3 mb-8">
               {[
-                { icon: <Clock size={14} />, label: data.duration },
-                { icon: <Users size={14} />, label: `${data.students} Enrolled` },
-                { icon: <Award size={14} />, label: data.level },
-                { icon: <Star size={14} />, label: `${data.rating} Rating` },
+                { icon: Clock, label: data.duration },
+                { icon: Users, label: `${data.students} Enrolled` },
+                { icon: Award, label: data.level },
+                { icon: Star, label: `${data.rating} Rating` },
               ].map((m, i) => (
                 <div key={i} className="flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-sm font-medium"
                   style={{ background: `${accent}12`, border: `1px solid ${accent}25`, color: accent }}>
-                  {m.icon} {m.label}
+                  <m.icon size={14} /> {m.label}
                 </div>
               ))}
             </motion.div>
@@ -143,25 +174,23 @@ export default function CourseDetail({ data }: { data: CourseData }) {
             <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4">
               <Link href={enrollHref}
-                className="px-8 py-4 rounded-2xl font-bold text-center transition-all hover:scale-105 hover:shadow-2xl"
+                className="px-8 py-4 rounded-2xl font-bold text-center transition-all hover:scale-105"
                 style={{ background: data.gradient, color: isElec ? "#0A0F1E" : "#fff", boxShadow: `0 0 30px ${accent}40` }}>
                 Enroll Now — Free Demo
               </Link>
               <a href={`https://wa.me/${waPhone}`} target="_blank" rel="noopener noreferrer"
                 className="px-8 py-4 rounded-2xl font-semibold text-center transition-all hover:bg-white/10 flex items-center justify-center gap-2"
                 style={{ border: `1px solid ${accent}40`, color: accent }}>
-                <svg viewBox="0 0 24 24" className="w-4 h-4 fill-current"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" /></svg>
-                Chat on WhatsApp
+                <MessageSquare size={16} /> Chat on WhatsApp
               </a>
             </motion.div>
           </div>
 
-          {/* Right — floating card */}
+          {/* Right card */}
           <motion.div initial={{ opacity: 0, x: 40 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8, delay: 0.3 }}
             className="rounded-3xl p-8 relative overflow-hidden"
             style={{ background: `linear-gradient(135deg, ${accent}10, ${accent}05)`, border: `1px solid ${accent}25`, backdropFilter: "blur(12px)" }}>
-            <div className="absolute top-0 right-0 w-40 h-40 rounded-full opacity-10 blur-2xl"
-              style={{ background: accent }} />
+            <div className="absolute top-0 right-0 w-40 h-40 rounded-full opacity-10 blur-2xl" style={{ background: accent }} />
             <div className="text-sm font-semibold mb-5" style={{ color: accent }}>COURSE OVERVIEW</div>
             <p className="text-gray-300 text-sm leading-relaxed mb-6">{data.overview}</p>
             <div className="grid grid-cols-2 gap-4">
@@ -186,10 +215,11 @@ export default function CourseDetail({ data }: { data: CourseData }) {
       {/* ── WHAT YOU'LL LEARN ── */}
       <section className="py-20 px-6" style={{ background: "rgba(255,255,255,0.02)" }}>
         <div className="max-w-6xl mx-auto">
-          <SectionHeader icon={<BookOpen size={22} />} title="What You'll Learn" accent={accent} fontClass={fontClass} />
+          <SectionHeader icon={BookOpen} title="What You'll Learn" accent={accent} fontClass={fontClass} />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
             {data.learns.map((item, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}
+              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }} transition={{ delay: i * 0.05 }}
                 className="flex items-start gap-3 p-4 rounded-2xl"
                 style={{ background: `${accent}08`, border: `1px solid ${accent}18` }}>
                 <div className="w-6 h-6 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5"
@@ -206,16 +236,23 @@ export default function CourseDetail({ data }: { data: CourseData }) {
       {/* ── TECHNOLOGIES ── */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <SectionHeader icon={<Zap size={22} />} title="Technologies You'll Master" accent={accent} fontClass={fontClass} />
+          <SectionHeader icon={Cpu} title="Technologies You'll Master" accent={accent} fontClass={fontClass} />
           <div className="flex flex-wrap justify-center gap-4 mt-10">
-            {data.technologies.map((tech, i) => (
-              <motion.div key={i} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: i * 0.04 }}
-                className="flex flex-col items-center gap-2 px-5 py-4 rounded-2xl min-w-[90px] card-hover"
-                style={{ background: `${accent}08`, border: `1px solid ${accent}20` }}>
-                <span className="text-3xl">{tech.icon}</span>
-                <span className="text-xs font-semibold text-gray-300 text-center">{tech.name}</span>
-              </motion.div>
-            ))}
+            {data.technologies.map((tech, i) => {
+              const Icon = tech.icon;
+              return (
+                <motion.div key={i} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }} transition={{ delay: i * 0.04 }}
+                  className="flex flex-col items-center gap-2.5 px-5 py-5 rounded-2xl min-w-[100px] card-hover"
+                  style={{ background: `${accent}08`, border: `1px solid ${accent}20` }}>
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center"
+                    style={{ background: `${accent}18`, color: accent }}>
+                    <Icon size={20} />
+                  </div>
+                  <span className="text-xs font-semibold text-gray-300 text-center">{tech.name}</span>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -223,10 +260,11 @@ export default function CourseDetail({ data }: { data: CourseData }) {
       {/* ── COURSE OUTCOMES ── */}
       <section className="py-20 px-6" style={{ background: "rgba(255,255,255,0.02)" }}>
         <div className="max-w-6xl mx-auto">
-          <SectionHeader icon={<Target size={22} />} title="Course Outcomes" accent={accent} fontClass={fontClass} />
+          <SectionHeader icon={Target} title="Course Outcomes" accent={accent} fontClass={fontClass} />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
             {data.outcomes.map((o, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
+              <motion.div key={i} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }} transition={{ delay: i * 0.08 }}
                 className="p-6 rounded-2xl card-hover relative overflow-hidden"
                 style={{ background: `${accent}08`, border: `1px solid ${accent}20` }}>
                 <div className="absolute top-0 right-0 w-20 h-20 rounded-full opacity-10 blur-xl" style={{ background: accent }} />
@@ -246,17 +284,24 @@ export default function CourseDetail({ data }: { data: CourseData }) {
       {/* ── WHY CHOOSE ── */}
       <section className="py-20 px-6">
         <div className="max-w-6xl mx-auto">
-          <SectionHeader icon={<Star size={22} />} title="Why Choose This Course?" accent={accent} fontClass={fontClass} />
+          <SectionHeader icon={Star} title="Why Choose This Course?" accent={accent} fontClass={fontClass} />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-10">
-            {data.whyChoose.map((w, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
-                className="p-6 rounded-2xl text-center card-hover"
-                style={{ background: "rgba(255,255,255,0.04)", border: `1px solid ${accent}18` }}>
-                <div className="text-4xl mb-4">{w.icon}</div>
-                <div className="font-bold text-white mb-2 text-sm">{w.title}</div>
-                <div className="text-gray-400 text-xs leading-relaxed">{w.desc}</div>
-              </motion.div>
-            ))}
+            {data.whyChoose.map((w, i) => {
+              const Icon = w.icon;
+              return (
+                <motion.div key={i} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }} transition={{ delay: i * 0.08 }}
+                  className="p-6 rounded-2xl text-center card-hover"
+                  style={{ background: "rgba(255,255,255,0.04)", border: `1px solid ${accent}18` }}>
+                  <div className="w-12 h-12 rounded-2xl flex items-center justify-center mx-auto mb-4"
+                    style={{ background: `${accent}18`, color: accent }}>
+                    <Icon size={22} />
+                  </div>
+                  <div className="font-bold text-white mb-2 text-sm">{w.title}</div>
+                  <div className="text-gray-400 text-xs leading-relaxed">{w.desc}</div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -264,13 +309,14 @@ export default function CourseDetail({ data }: { data: CourseData }) {
       {/* ── PROJECTS ── */}
       <section className="py-20 px-6" style={{ background: "rgba(255,255,255,0.02)" }}>
         <div className="max-w-6xl mx-auto">
-          <SectionHeader icon={<Briefcase size={22} />} title="Projects You'll Build" accent={accent} fontClass={fontClass} />
+          <SectionHeader icon={Layers} title="Projects You'll Build" accent={accent} fontClass={fontClass} />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10">
             {data.projects.map((p, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.08 }}
+              <motion.div key={i} initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }} transition={{ delay: i * 0.08 }}
                 className="p-6 rounded-2xl card-hover"
                 style={{ background: "rgba(255,255,255,0.04)", border: `1px solid ${accent}20` }}>
-                <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 text-lg font-bold"
+                <div className="w-10 h-10 rounded-xl flex items-center justify-center mb-4 font-bold text-base"
                   style={{ background: data.gradient, color: isElec ? "#0A0F1E" : "#fff" }}>
                   {i + 1}
                 </div>
@@ -293,10 +339,11 @@ export default function CourseDetail({ data }: { data: CourseData }) {
       {/* ── SYLLABUS ── */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto">
-          <SectionHeader icon={<BookOpen size={22} />} title="Complete Syllabus" accent={accent} fontClass={fontClass} />
+          <SectionHeader icon={BookOpen} title="Complete Syllabus" accent={accent} fontClass={fontClass} />
           <div className="flex flex-col gap-3 mt-10">
             {data.syllabus.map((s, i) => (
-              <motion.div key={i} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.04 }}>
+              <motion.div key={i} initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }} transition={{ delay: i * 0.04 }}>
                 <SyllabusItem mod={`Module ${i + 1}: ${s.module}`} topics={s.topics} accent={accent} />
               </motion.div>
             ))}
@@ -307,24 +354,24 @@ export default function CourseDetail({ data }: { data: CourseData }) {
       {/* ── PRICING ── */}
       <section className="py-20 px-6" style={{ background: "rgba(255,255,255,0.02)" }}>
         <div className="max-w-4xl mx-auto">
-          <SectionHeader icon={<Award size={22} />} title="Course Pricing" accent={accent} fontClass={fontClass} />
+          <SectionHeader icon={Tag} title="Course Pricing" accent={accent} fontClass={fontClass} />
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-            className="mt-10 rounded-3xl overflow-hidden relative"
+            className="mt-10 rounded-3xl overflow-hidden"
             style={{ border: `1px solid ${accent}30` }}>
-            {/* Top banner */}
             <div className="px-8 py-4 flex items-center justify-between flex-wrap gap-3"
               style={{ background: data.gradient }}>
-              <div className="font-bold text-lg" style={{ color: isElec ? "#0A0F1E" : "#fff" }}>
-                🎉 Limited Time Offer — {savedPct}% OFF
+              <div className="flex items-center gap-2 font-bold text-lg"
+                style={{ color: isElec ? "#0A0F1E" : "#fff" }}>
+                <BadgeCheck size={20} /> Limited Time Offer — {savedPct}% OFF
               </div>
-              <div className="text-sm font-semibold" style={{ color: isElec ? "#0A0F1E" : "rgba(255,255,255,0.85)" }}>
+              <div className="text-sm font-semibold"
+                style={{ color: isElec ? "#0A0F1E" : "rgba(255,255,255,0.85)" }}>
                 Save ₹{saved.toLocaleString("en-IN")}
               </div>
             </div>
 
             <div className="p-8 grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
               style={{ background: `linear-gradient(135deg, ${accent}08, rgba(255,255,255,0.02))` }}>
-              {/* Price block */}
               <div>
                 <div className="flex items-end gap-4 mb-3">
                   <div className="text-5xl font-extrabold" style={{ color: accent }}>
@@ -347,7 +394,6 @@ export default function CourseDetail({ data }: { data: CourseData }) {
                 </Link>
               </div>
 
-              {/* Includes */}
               <div>
                 <div className="text-sm font-bold text-white mb-4">What's Included:</div>
                 <div className="flex flex-col gap-3">
@@ -367,13 +413,14 @@ export default function CourseDetail({ data }: { data: CourseData }) {
         </div>
       </section>
 
-      {/* ── CTA STRIP ── */}
+      {/* ── CTA ── */}
       <section className="py-16 px-6">
         <motion.div initial={{ opacity: 0, scale: 0.97 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }}
           className="max-w-4xl mx-auto text-center p-12 rounded-3xl relative overflow-hidden"
           style={{ background: `linear-gradient(135deg, ${accent}12, ${accent}06)`, border: `1px solid ${accent}25` }}>
           <div className="absolute inset-0 opacity-5 pointer-events-none"
             style={{ background: `radial-gradient(circle at 50% 50%, ${accent}, transparent 70%)` }} />
+          <Rocket size={40} className="mx-auto mb-4 relative z-10" style={{ color: accent }} />
           <h2 className={`text-3xl font-bold ${fontClass} text-white mb-3 relative z-10`}>
             Ready to Start Your Journey?
           </h2>
@@ -398,19 +445,6 @@ export default function CourseDetail({ data }: { data: CourseData }) {
       <Footer theme={data.theme} />
       <WhatsAppButton phone={waPhone} />
       <BackToTop />
-    </div>
-  );
-}
-
-function SectionHeader({ icon, title, accent, fontClass }: { icon: React.ReactNode; title: string; accent: string; fontClass: string }) {
-  return (
-    <div className="flex flex-col items-center text-center gap-3">
-      <div className="w-12 h-12 rounded-2xl flex items-center justify-center"
-        style={{ background: `${accent}18`, color: accent }}>
-        {icon}
-      </div>
-      <h2 className={`text-4xl font-bold ${fontClass} text-white`}>{title}</h2>
-      <div className="w-16 h-1 rounded-full" style={{ background: `linear-gradient(90deg, transparent, ${accent}, transparent)` }} />
     </div>
   );
 }
